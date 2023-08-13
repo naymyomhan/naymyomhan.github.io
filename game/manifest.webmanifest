@@ -1,0 +1,15 @@
+{
+    "name": "shankoemee",
+    "short_name": "shankoemee",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "background_color": "#413159",
+    "theme_color": "#000",
+    "description": "Shan Koe Mee",
+    "icons": [{
+      "src": "TemplateData/icons/unity-logo-dark.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }]
+  }
