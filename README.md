@@ -1,6 +1,6 @@
 # naymyomhan.github.io
 
-Personal portfolio and tech blog for **Nay Myo Mhan** (a.k.a. *Thiha Lynn*) — Software Engineer, Full-Stack Developer, and Captain of **Backbenchers Studio**. A fully immersive One Piece "pirate" themed web experience. 🏴‍☠️
+Personal portfolio and tech blog for **Nay Myo Mhan** (a.k.a. *Thiha Lynn*) — Software Engineer, Full-Stack Developer, and Captain of **Backbenchers Studio**. A fully immersive One Piece × Roronoa Zoro (Three Sword Style) themed web experience — green &amp; steel, sharp as a blade. ⚔️🏴‍☠️
 
 ## 🚀 Live Site
 

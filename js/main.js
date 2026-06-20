@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloaderBar = document.getElementById('preloaderBar');
     const preloaderText = document.getElementById('preloaderText');
     if (preloader) {
-        const msgs = ['Hoisting the colors...', 'Charting the Grand Line...', 'Waking the Den Den Mushi...', 'Setting sail! 🏴‍☠️'];
+        const msgs = ['Drawing the blades...', 'Sharpening Wadō Ichimonji...', 'Channeling Enma...', 'Ready to cut! ⚔️'];
         let prog = 0, mi = 0;
         const tick = setInterval(() => {
             prog = Math.min(prog + Math.random() * 17 + 7, 100);
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const s = 2 + Math.random() * 4;
             p.style.width = s + 'px';
             p.style.height = s + 'px';
-            const colors = ['#f5c842','#ffe066','#42a5f5','#dc3545','#c9991a','#64b5f6'];
+            const colors = ['#40916c','#95d5b2','#52b788','#dc3545','#2d6a4f','#74c69d'];
             p.style.background = colors[Math.floor(Math.random() * colors.length)];
             particlesContainer.appendChild(p);
         }
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             star.style.position = 'absolute';
             star.style.width = (1 + Math.random() * 2) + 'px';
             star.style.height = star.style.width;
-            star.style.background = Math.random() > 0.7 ? '#f5c842' : '#e8dcc8';
+            star.style.background = Math.random() > 0.7 ? '#40916c' : '#dbe4de';
             star.style.borderRadius = '50%';
             star.style.left = Math.random() * 100 + '%';
             star.style.top = Math.random() * 60 + '%';
@@ -159,13 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const tw = document.getElementById('typewriter');
     if (tw) {
         const phrases = [
-            ' shipping full-stack, from DB to UI...',
-            ' Laravel + Node on the back deck ⚓',
-            ' Flutter apps across every sea! 📱',
-            ' real-time WebSocket cannons 💥',
+            ' I cut problems down. Clean. ⚔️',
+            ' Laravel + Node — no wasted strikes',
+            ' Flutter on mobile, React up front',
+            ' real-time WebSocket — first strike wins 💥',
             ' APIs hardened to OWASP Top 10 🛡️',
-            ' AI is my Devil Fruit — Gear 5th! ⚡',
-            ' from Yangon to the Grand Line 🏴‍☠️',
+            ' Enma drains the weak. I wield AI. ⚡',
+            ' nothing happened. (just shipped it)',
         ];
         let pi = 0, ci = 0, deleting = false, speed = 60;
         function type() {
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const spark = document.createElement('div');
             spark.style.cssText = `
                 position:fixed; width:4px; height:4px; border-radius:50%;
-                background:${['#f5c842','#ffe066','#dc3545'][Math.floor(Math.random()*3)]};
+                background:${['#40916c','#95d5b2','#dc3545'][Math.floor(Math.random()*3)]};
                 left:${e.clientX}px; top:${e.clientY}px;
                 pointer-events:none; z-index:9999;
                 transition: all 0.6s ease-out;
