@@ -159,13 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const tw = document.getElementById('typewriter');
     if (tw) {
         const phrases = [
-            ' navigating the Grand Line of code...',
-            ' converting PHP → Node.js at Gear 5th speed!',
-            ' upgrading Laravel like finding One Piece!',
-            ' building iOS apps — Devil Fruit powers! 😈',
-            ' AI is my Hito Hito no Mi, Model: Nika! ⚡',
-            ' one pirate + AI = the whole fleet! 🏴‍☠️',
-            ' Gear 5th Engineering activated! 🔥',
+            ' shipping full-stack, from DB to UI...',
+            ' Laravel + Node on the back deck ⚓',
+            ' Flutter apps across every sea! 📱',
+            ' real-time WebSocket cannons 💥',
+            ' APIs hardened to OWASP Top 10 🛡️',
+            ' AI is my Devil Fruit — Gear 5th! ⚡',
+            ' from Yangon to the Grand Line 🏴‍☠️',
         ];
         let pi = 0, ci = 0, deleting = false, speed = 60;
         function type() {
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
     statNums.forEach(n => counterObs.observe(n));
 
     // ===== SCROLL REVEAL =====
-    const revealEls = document.querySelectorAll('.about-card, .skill-category, .blog-card, .contact-card, .section-header');
+    const revealEls = document.querySelectorAll('.about-card, .skill-category, .blog-card, .contact-card, .section-header, .timeline-item, .about-intro');
     const revealObs = new IntersectionObserver(entries => {
         entries.forEach((e, i) => {
             if (e.isIntersecting) {
