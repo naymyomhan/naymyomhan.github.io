@@ -2,11 +2,345 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nay Myo Mhan</title>
+    <title>Nay Myo Mhan — Software Engineer & Captain of Backbenchers Studio</title>
+    <meta name="description" content="Personal portfolio and tech blog of Nay Myo Mhan (Thiha Lynn) — Software Engineer, Full-Stack Developer, and Captain of Backbenchers Studio. Sailing the Grand Line of code.">
+    <meta name="author" content="Nay Myo Mhan">
+    <meta name="theme-color" content="#0a0e1a">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://naymyomhan.github.io/">
+    <meta property="og:title" content="Nay Myo Mhan — Software Engineer & Full-Stack Developer">
+    <meta property="og:description" content="Full-Stack Developer wielding AI as a Devil Fruit. Blog, portfolio, and adventure logs from the Grand Line of engineering. ☠️">
+    <meta property="og:image" content="https://naymyomhan.github.io/images/og-nay-poster.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:secure_url" content="https://naymyomhan.github.io/images/og-nay-poster.png">
+    <meta property="og:image:alt" content="WANTED — Nay D. Myo Mhan — ฿1,111,000,000 — Software Engineer">
+    <link rel="image_src" href="https://naymyomhan.github.io/images/og-nay-poster.png">
+    <link rel="canonical" href="https://naymyomhan.github.io/">
+    <meta name="robots" content="index,follow">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nay Myo Mhan — Software Engineer & Full-Stack Developer">
+    <meta name="twitter:description" content="Full-Stack Developer wielding AI as a Devil Fruit. Sailing the Grand Line of engineering.">
+    <meta name="twitter:image" content="https://naymyomhan.github.io/images/og-nay-poster.png">
+    <meta name="twitter:image:alt" content="WANTED — Nay D. Myo Mhan — Software Engineer">
+    <meta property="og:site_name" content="Nay Myo Mhan">
+    <meta property="og:locale" content="en_US">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/jolly-roger-cyber-nobg.png">
+    <link rel="apple-touch-icon" href="images/jolly-roger-cyber-nobg.png">
+    <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('pirate-theme')||'dark')</script>
 </head>
 <body>
-    Loading . . .
+    <!-- Preloader — Hoist the Colors -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo-wrap">
+                <img src="images/jolly-roger-cyber-nobg.png" alt="" class="preloader-logo">
+                <div class="preloader-ring"></div>
+            </div>
+            <div class="preloader-title">BACKBENCHERS PIRATES</div>
+            <div class="preloader-bar"><span id="preloaderBar"></span></div>
+            <div class="preloader-text" id="preloaderText">Hoisting the colors...</div>
+        </div>
+    </div>
+
+    <!-- Cinematic overlays -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <div class="vignette-overlay" aria-hidden="true"></div>
+
+    <!-- Ocean waves background -->
+    <div class="ocean-bg">
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+    </div>
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="images/jolly-roger-cyber-nobg.png" alt="Backbenchers Jolly Roger" class="nav-logo-img">
+                <span class="logo-text">Backbenchers Pirates</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Arsenal</a>
+                <a href="#blog" class="nav-link">Log Book</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Cinematic hero video backdrop -->
+        <div class="hero-video-wrap" aria-hidden="true">
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/og-nay-poster.png">
+                <source src="one.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text-side">
+                <div class="hero-badge animate-fade-up">
+                    <span class="badge-dot"></span>
+                    Setting Sail on New Adventures
+                </div>
+                <h1 class="hero-title animate-fade-up delay-1">
+                    I'm <span class="pirate-text">Nay Myo Mhan</span>
+                    <span class="hero-alias">a.k.a. Thiha Lynn ⚓</span>
+                </h1>
+                <div class="hero-bounty animate-fade-up delay-2">
+                    <div class="bounty-poster-frame" id="bountyPoster">
+                        <img src="images/nay-bounty-poster.png" alt="WANTED — Nay D. Myo Mhan — ฿1,111,000,000" class="bounty-poster-img">
+                        <div class="bounty-shine"></div>
+                    </div>
+                </div>
+                <div class="hero-typewriter animate-fade-up delay-3">
+                    <span class="typewriter-prefix">Captain's Log: </span>
+                    <span class="typewriter-text" id="typewriter"></span>
+                    <span class="typewriter-cursor">▌</span>
+                </div>
+                <p class="hero-description animate-fade-up delay-4">
+                    Navigating the Grand Line of software engineering — from full-stack web apps to mobile platforms.
+                    Wielding AI as my Devil Fruit power to build products faster than Gear 5th! ⚡
+                </p>
+                <div class="hero-cta animate-fade-up delay-5">
+                    <a href="#blog" class="btn btn-primary">
+                        <span>📜 Captain's Log Book</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>🏴‍☠️ Join My Crew</span>
+                    </a>
+                </div>
+                <div class="hero-stats animate-fade-up delay-5">
+                    <div class="stat">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Years at Sea</span>
+                    </div>
+                    <div class="stat-divider">⚓</div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="30">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Treasures Found</span>
+                    </div>
+                    <div class="stat-divider">⚓</div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="6">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Devil Fruits</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-side animate-fade-up delay-2">
+                <div class="hero-image-frame">
+                    <img src="images/my-profile.png" alt="Nay Myo Mhan — Captain of Backbenchers Studio" class="hero-image">
+                    <div class="hero-image-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-compass">⚓</div>
+            <span>Dive Deeper</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">〜 Captain's Profile 〜</span>
+                <h2 class="section-title">About <span class="pirate-text">The Captain</span></h2>
+                <p class="section-subtitle">Every pirate has their story. Here's mine.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card treasure-card">
+                    <div class="about-icon">🎯</div>
+                    <h3>My Dream</h3>
+                    <p>Like Luffy wants to be Pirate King, I'm on a quest to build scalable, secure, and world-class products. One engineer armed with AI can achieve what once required a whole fleet!</p>
+                </div>
+                <div class="about-card treasure-card">
+                    <div class="about-icon">⚡</div>
+                    <h3>Devil Fruit Power</h3>
+                    <p>AI is my Devil Fruit — Claude Opus is my Gear 5th. Combining deep engineering with modern AI to deliver at the speed of Gomu Gomu no Jet Pistol!</p>
+                </div>
+                <div class="about-card treasure-card">
+                    <div class="about-icon">🗺️</div>
+                    <h3>The Grand Line</h3>
+                    <p>PHP → Node.js migrations, Java → Swift conversions, Laravel upgrades — every island on the Grand Line is a new challenge conquered!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">〜 Arsenal 〜</span>
+                <h2 class="section-title">Pirate's <span class="pirate-text">Arsenal</span></h2>
+                <p class="section-subtitle">Every weapon in my treasure chest</p>
+            </div>
+            <div class="skills-categories">
+                <div class="skill-category treasure-card">
+                    <h3 class="category-title"><span class="category-icon">⚔️</span> Backend (Haki)</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span><span class="skill-tag">PHP</span><span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">Express.js</span><span class="skill-tag">Java</span><span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-category treasure-card">
+                    <h3 class="category-title"><span class="category-icon">🎨</span> Frontend (Navigation)</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span><span class="skill-tag">HTML/CSS</span><span class="skill-tag">React</span>
+                        <span class="skill-tag">Responsive Design</span><span class="skill-tag">UI/UX</span>
+                    </div>
+                </div>
+                <div class="skill-category treasure-card">
+                    <h3 class="category-title"><span class="category-icon">📱</span> Mobile (Den Den Mushi)</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Android (Java)</span><span class="skill-tag">iOS (Swift)</span>
+                        <span class="skill-tag">Native Dev</span><span class="skill-tag">Cross-Platform</span>
+                    </div>
+                </div>
+                <div class="skill-category treasure-card">
+                    <h3 class="category-title"><span class="category-icon">😈</span> AI (Devil Fruits)</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Claude Opus</span><span class="skill-tag">GPT / Custom GPTs</span>
+                        <span class="skill-tag">AI-Powered Dev</span><span class="skill-tag">Prompt Engineering</span>
+                    </div>
+                </div>
+                <div class="skill-category treasure-card">
+                    <h3 class="category-title"><span class="category-icon">🛡️</span> Security & DevOps (Armor)</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span><span class="skill-tag">Linux</span><span class="skill-tag">Server Admin</span>
+                        <span class="skill-tag">Cybersecurity</span><span class="skill-tag">IoT</span><span class="skill-tag">Database Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">〜 Captain's Log Book 〜</span>
+                <h2 class="section-title">Adventure <span class="pirate-text">Logs</span></h2>
+                <p class="section-subtitle">Stories from the Grand Line of engineering</p>
+            </div>
+            <div class="blog-grid">
+                <a href="blog/opus-4-6-ai-engineering.html" class="blog-card treasure-card featured">
+                    <div class="blog-card-badge">⭐ Featured</div>
+                    <div class="blog-card-image">
+                        <img src="images/hero-luffy.png" alt="Gear 5th AI Engineering" loading="lazy">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="blog-date">📅 Feb 7, 2026</span>
+                            <span class="blog-read-time">⏱️ 4 min</span>
+                            <span class="blog-lang">🏴‍☠️ EN</span>
+                        </div>
+                        <h3 class="blog-card-title">Opus 4.6 & The Age of AI-Powered Engineering: Real-World Conversions That Changed Everything</h3>
+                        <p class="blog-card-excerpt">How I leveraged Claude Opus to convert PHP → Node.js, upgrade Laravel 8 → 12, and build native iOS apps — all at Gear 5th speed!</p>
+                        <div class="blog-card-tags">
+                            <span class="tag">AI</span><span class="tag">Engineering</span><span class="tag">Claude Opus</span>
+                        </div>
+                        <span class="blog-card-read-more">Read the log ⛵</span>
+                    </div>
+                </a>
+                <a href="blog/opus-4-6-ai-engineering-mm.html" class="blog-card treasure-card">
+                    <div class="blog-card-image">
+                        <img src="images/luffy_sabaody_egghead.jpg" alt="Luffy — 2022 vs 2026 Engineer's Journey" loading="lazy">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="blog-date">📅 Feb 7, 2026</span>
+                            <span class="blog-read-time">⏱️ 4 min</span>
+                            <span class="blog-lang">🏴‍☠️ MY</span>
+                        </div>
+                        <h3 class="blog-card-title">Opus 4.6 & The Age of AI-Powered Engineering — Myanmar Edition</h3>
+                        <p class="blog-card-excerpt">The same epic AI-powered engineering journey — PHP → Node.js, Laravel 8 → 12, Android → iOS conversions — now in Myanmar language!</p>
+                        <div class="blog-card-tags">
+                            <span class="tag">AI</span><span class="tag">🏴‍☠️ MM</span>
+                        </div>
+                        <span class="blog-card-read-more">Read the log ⛵</span>
+                    </div>
+                </a>
+                <div class="blog-card treasure-card coming-soon">
+                    <div class="blog-card-image">
+                        <div class="blog-card-image-placeholder"><span>🗺️</span></div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta"><span class="blog-date">🏴‍☠️ Coming Soon</span></div>
+                        <h3 class="blog-card-title">Building Scalable Game Backends: Navigating the New World</h3>
+                        <p class="blog-card-excerpt">A deep dive into migrating concurrent-heavy game servers — upgrading your ship for the New World.</p>
+                        <div class="blog-card-tags"><span class="tag">Node.js</span><span class="tag">Backend</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">〜 Den Den Mushi 〜</span>
+                <h2 class="section-title">Join My <span class="pirate-text">Crew</span></h2>
+                <p class="section-subtitle">Have a treasure map? Let's go find it together! 🗺️</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card treasure-card">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/naymyomhan" target="_blank" rel="noopener" class="contact-link">@naymyomhan</a>
+                </div>
+                <div class="contact-card treasure-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Pigeon Mail</h3>
+                    <a href="mailto:koshanlay1994@gmail.com" class="contact-link">koshanlay1994@gmail.com</a>
+                </div>
+                <div class="contact-card treasure-card">
+                    <div class="contact-icon">🌊</div>
+                    <h3>Location</h3>
+                    <span class="contact-link">Grand Line / Worldwide</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Pirate Ship over ocean -->
+    <div class="floating-ship">
+        <img src="images/thousand-sunny.png" alt="Thousand Sunny" class="ship-img">
+    </div>
+    <div class="jolly-flag jolly-flag-left">
+        <img src="images/jolly-roger-cyber-nobg.png" alt="Jolly Roger" class="flag-img">
+    </div>
+    <div class="jolly-flag jolly-flag-right">
+        <img src="images/jolly-roger-cyber-nobg.png" alt="Jolly Roger" class="flag-img">
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><img src="images/jolly-roger-cyber-nobg.png" alt="" class="footer-logo-img"> <span class="logo-text">Backbenchers Pirates</span></div>
+                <p class="footer-text">Crafted with ☕ & Devil Fruit Powers by Nay Myo Mhan © 2026</p>
+                <div class="footer-links"><a href="https://github.com/naymyomhan" target="_blank" rel="noopener">GitHub</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
