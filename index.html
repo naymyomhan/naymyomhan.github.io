@@ -167,256 +167,46 @@
         <div class="filter-bar" role="group" aria-label="Project Category Filter">
           <button class="filter-btn active" data-filter="all">[ ALL ]</button>
           <button class="filter-btn" data-filter="web">[ WEB APPS ]</button>
-          <button class="filter-btn" data-filter="games">[ GAMES ]</button>
-          <button class="filter-btn" data-filter="tools">[ TOOLS ]</button>
+          <button class="filter-btn" data-filter="tools">[ AI &amp; TOOLS ]</button>
         </div>
       </div>
 
       <!-- Projects Grid -->
       <div class="projects-grid">
 
-        <!-- Project 1: Next.js Web App -->
-        <article class="project-card" data-category="web">
+        <!-- Featured Project: Rivo AI -->
+        <article class="project-card featured-quest-card" data-category="web tools">
           <div class="project-preview">
             <span class="preview-quest-num">QUEST #01</span>
-            <span class="pixel-badge badge-green preview-badge-status">COMPLETED</span>
-            <div class="project-preview-art">
-              <!-- Pixel Art Web Window SVG -->
-              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-                <rect x="2" y="4" width="28" height="24" fill="#1a1d30"/>
-                <rect x="2" y="4" width="28" height="5" fill="#2d3352"/>
-                <rect x="5" y="6" width="2" height="2" fill="#ff0055"/>
-                <rect x="9" y="6" width="2" height="2" fill="#ffcc00"/>
-                <rect x="13" y="6" width="2" height="2" fill="#39ff14"/>
-                <rect x="6" y="12" width="8" height="4" fill="#00f0ff"/>
-                <rect x="16" y="12" width="10" height="2" fill="#ffcc00"/>
-                <rect x="16" y="15" width="6" height="1" fill="#f0f4fc"/>
-                <rect x="6" y="18" width="20" height="7" fill="#101221"/>
-                <rect x="8" y="20" width="5" height="3" fill="#39ff14"/>
-                <rect x="15" y="20" width="5" height="3" fill="#00f0ff"/>
-              </svg>
+            <span class="pixel-badge badge-green preview-badge-status">● LIVE IN PRODUCTION</span>
+            <div class="project-real-img-frame">
+              <img src="images/rivo-real.png" alt="Rivo AI - Content Creation Studio" class="project-card-real-img">
             </div>
           </div>
           <div class="project-info">
-            <h3 class="project-title">Next.js Full-Stack App</h3>
+            <div class="quest-tags-top">
+              <span class="pixel-badge badge-gold">★ FEATURED QUEST</span>
+              <span class="pixel-badge badge-cyan">SAAS &bull; AI STUDIO</span>
+            </div>
+            <h3 class="project-title glitch-text" data-text="Rivo AI - Content Studio">
+              Rivo AI - Content Studio
+            </h3>
             <p class="project-desc">
-              High-performance web application built with Next.js, featuring server-side rendering, responsive Tailwind UI components, and smooth API integration.
+              All-in-one generative AI platform engineered for video creators and storytellers. Automatically transforms long videos into viral recaps, synthesizes realistic AI voiceovers and custom voice cloning, and generates bilingual subtitles (Myanmar &amp; English) with Google Gemini AI.
             </p>
             <div class="project-tech-tags">
               <span class="tech-tag">#NEXTJS</span>
-              <span class="tech-tag">#JAVASCRIPT</span>
+              <span class="tech-tag">#GEMINI-AI</span>
               <span class="tech-tag">#TAILWIND</span>
+              <span class="tech-tag">#TTS-VOICE</span>
+              <span class="tech-tag">#VIDEO-PIPELINE</span>
             </div>
             <div class="project-actions">
-              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
-                <span>🎮</span> DEMO
+              <a href="projects/rivo-ai.html" class="pixel-btn pixel-btn-primary">
+                <span>📜</span> QUEST DETAILS
               </a>
-              <a href="#" class="pixel-btn pixel-btn-sm">
-                <span>📂</span> CODE
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 2: Unity Game -->
-        <article class="project-card" data-category="games">
-          <div class="project-preview">
-            <span class="preview-quest-num">QUEST #02</span>
-            <span class="pixel-badge badge-gold preview-badge-status">FEATURED</span>
-            <div class="project-preview-art">
-              <!-- Pixel Art Gamepad SVG -->
-              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-                <rect x="4" y="9" width="24" height="14" fill="#242842"/>
-                <rect x="6" y="7" width="20" height="18" fill="#2d3352"/>
-                <rect x="8" y="14" width="6" height="4" fill="#131624"/>
-                <rect x="9" y="13" width="4" height="6" fill="#131624"/>
-                <rect x="10" y="15" width="2" height="2" fill="#00f0ff"/>
-                <rect x="19" y="16" width="3" height="3" fill="#ff0055"/>
-                <rect x="23" y="13" width="3" height="3" fill="#ffcc00"/>
-                <rect x="14" y="19" width="4" height="2" fill="#39ff14"/>
-              </svg>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Unity 2D/3D Action Game</h3>
-            <p class="project-desc">
-              Interactive game created in Unity &amp; C#, featuring custom player controller physics, particle visual effects, combat systems, and dynamic audio soundscapes.
-            </p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">#UNITY</span>
-              <span class="tech-tag">#CSHARP</span>
-              <span class="tech-tag">#GAMEDEV</span>
-            </div>
-            <div class="project-actions">
-              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
-                <span>🎮</span> DEMO
-              </a>
-              <a href="#" class="pixel-btn pixel-btn-sm">
-                <span>📂</span> CODE
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 3: Laravel REST API & Microservice -->
-        <article class="project-card" data-category="tools">
-          <div class="project-preview">
-            <span class="preview-quest-num">QUEST #03</span>
-            <span class="pixel-badge badge-cyan preview-badge-status">IN DEV</span>
-            <div class="project-preview-art">
-              <!-- Pixel Art Terminal / CLI SVG -->
-              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-                <rect x="4" y="5" width="24" height="22" fill="#080911"/>
-                <rect x="4" y="5" width="24" height="4" fill="#1c2035"/>
-                <rect x="6" y="6" width="2" height="2" fill="#ff0055"/>
-                <rect x="9" y="6" width="2" height="2" fill="#39ff14"/>
-                <rect x="7" y="12" width="2" height="2" fill="#39ff14"/>
-                <rect x="9" y="14" width="2" height="2" fill="#39ff14"/>
-                <rect x="7" y="16" width="2" height="2" fill="#39ff14"/>
-                <rect x="12" y="14" width="6" height="2" fill="#00f0ff"/>
-                <rect x="7" y="20" width="14" height="2" fill="#8b9bb4"/>
-                <rect x="7" y="23" width="8" height="2" fill="#ffcc00"/>
-              </svg>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Laravel REST API Suite</h3>
-            <p class="project-desc">
-              Robust backend service engineered with PHP &amp; Laravel, featuring JWT authentication, automated queue jobs, and optimized MySQL queries.
-            </p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">#LARAVEL</span>
-              <span class="tech-tag">#PHP</span>
-              <span class="tech-tag">#MYSQL</span>
-            </div>
-            <div class="project-actions">
-              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
-                <span>🎮</span> DEMO
-              </a>
-              <a href="#" class="pixel-btn pixel-btn-sm">
-                <span>📂</span> CODE
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 4: Headless Laravel + Next.js Portal -->
-        <article class="project-card" data-category="web">
-          <div class="project-preview">
-            <span class="preview-quest-num">QUEST #04</span>
-            <span class="pixel-badge badge-green preview-badge-status">COMPLETED</span>
-            <div class="project-preview-art">
-              <!-- Pixel Art Cloud / Server SVG -->
-              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-                <rect x="5" y="7" width="22" height="5" fill="#20243d"/>
-                <rect x="7" y="9" width="3" height="1" fill="#39ff14"/>
-                <rect x="12" y="9" width="13" height="1" fill="#00f0ff"/>
-                <rect x="5" y="14" width="22" height="5" fill="#20243d"/>
-                <rect x="7" y="16" width="3" height="1" fill="#ffcc00"/>
-                <rect x="12" y="16" width="13" height="1" fill="#00f0ff"/>
-                <rect x="5" y="21" width="22" height="5" fill="#20243d"/>
-                <rect x="7" y="23" width="3" height="1" fill="#39ff14"/>
-                <rect x="12" y="23" width="13" height="1" fill="#00f0ff"/>
-              </svg>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Laravel + Next.js Portal</h3>
-            <p class="project-desc">
-              Decoupled modern platform uniting a high-speed Next.js frontend with an enterprise Laravel backend API for optimal SEO and performance.
-            </p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">#NEXTJS</span>
-              <span class="tech-tag">#LARAVEL</span>
-              <span class="tech-tag">#PHP</span>
-            </div>
-            <div class="project-actions">
-              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
-                <span>🎮</span> DEMO
-              </a>
-              <a href="#" class="pixel-btn pixel-btn-sm">
-                <span>📂</span> CODE
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 5: Unity Retro Prototype -->
-        <article class="project-card" data-category="games">
-          <div class="project-preview">
-            <span class="preview-quest-num">QUEST #05</span>
-            <span class="pixel-badge badge-gold preview-badge-status">BETA</span>
-            <div class="project-preview-art">
-              <!-- Pixel Art Cassette / Synth SVG -->
-              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-                <rect x="4" y="8" width="24" height="16" fill="#1b1e33"/>
-                <rect x="6" y="10" width="20" height="12" fill="#ff0055"/>
-                <rect x="8" y="12" width="16" height="8" fill="#f0f4fc"/>
-                <rect x="10" y="14" width="4" height="4" fill="#1b1e33"/>
-                <rect x="18" y="14" width="4" height="4" fill="#1b1e33"/>
-                <rect x="11" y="15" width="2" height="2" fill="#00f0ff"/>
-                <rect x="19" y="15" width="2" height="2" fill="#00f0ff"/>
-                <rect x="14" y="15" width="4" height="2" fill="#ffcc00"/>
-              </svg>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Unity Pixel Adventure</h3>
-            <p class="project-desc">
-              Retro top-down pixel game prototype developed in Unity &amp; C# featuring custom tilemap collisions, enemy AI state machines, and sound effects.
-            </p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">#UNITY</span>
-              <span class="tech-tag">#CSHARP</span>
-              <span class="tech-tag">#PIXEL-ART</span>
-            </div>
-            <div class="project-actions">
-              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
-                <span>🎮</span> DEMO
-              </a>
-              <a href="#" class="pixel-btn pixel-btn-sm">
-                <span>📂</span> CODE
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 6: Laravel E-Commerce -->
-        <article class="project-card" data-category="web">
-          <div class="project-preview">
-            <span class="preview-quest-num">QUEST #06</span>
-            <span class="pixel-badge badge-cyan preview-badge-status">STAGED</span>
-            <div class="project-preview-art">
-              <!-- Pixel Art Robot / Automation SVG -->
-              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-                <rect x="15" y="4" width="2" height="4" fill="#ffcc00"/>
-                <rect x="14" y="3" width="4" height="2" fill="#ff0055"/>
-                <rect x="7" y="8" width="18" height="14" fill="#2d3352"/>
-                <rect x="9" y="11" width="4" height="3" fill="#00f0ff"/>
-                <rect x="19" y="11" width="4" height="3" fill="#00f0ff"/>
-                <rect x="11" y="17" width="10" height="2" fill="#39ff14"/>
-                <rect x="5" y="13" width="2" height="6" fill="#1a1d30"/>
-                <rect x="25" y="13" width="2" height="6" fill="#1a1d30"/>
-                <rect x="10" y="22" width="12" height="6" fill="#1b1e33"/>
-              </svg>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Laravel E-Commerce Solution</h3>
-            <p class="project-desc">
-              Comprehensive web store with PHP &amp; Laravel, JavaScript-powered interactive cart and checkout, order processing, and administrative dashboard.
-            </p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">#LARAVEL</span>
-              <span class="tech-tag">#PHP</span>
-              <span class="tech-tag">#JAVASCRIPT</span>
-            </div>
-            <div class="project-actions">
-              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
-                <span>🎮</span> DEMO
-              </a>
-              <a href="#" class="pixel-btn pixel-btn-sm">
-                <span>📂</span> CODE
+              <a href="https://rivoai.app/" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-secondary">
+                <span>🚀</span> LAUNCH APP
               </a>
             </div>
           </div>

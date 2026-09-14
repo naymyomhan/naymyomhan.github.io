@@ -729,9 +729,9 @@
       const filter = this.getAttribute('data-filter');
 
       projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.style.display = 'flex';
+        const categories = (card.getAttribute('data-category') || '').split(' ');
+        if (filter === 'all' || categories.includes(filter)) {
+          card.style.display = card.classList.contains('featured-quest-card') ? 'grid' : 'flex';
           card.style.opacity = '1';
         } else {
           card.style.display = 'none';

@@ -1034,6 +1034,72 @@ body.glitch-active .pixel-btn:hover {
     0 0 16px rgba(0, 240, 255, 0.2);
 }
 
+/* Featured Quest Card Layout (Full Width with Real Screenshot) */
+.featured-quest-card {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  border-color: var(--color-gold);
+}
+
+.featured-quest-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 
+    inset -3px -3px 0 0 var(--panel-bevel-dark),
+    inset 3px 3px 0 0 var(--panel-bevel-light),
+    0 8px 0 0 #000,
+    0 0 24px rgba(163, 140, 243, 0.4);
+}
+
+.featured-quest-card .project-preview {
+  height: 100%;
+  min-height: 280px;
+  border-bottom: none;
+  border-right: 3px solid #000;
+}
+
+.project-real-img-frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #080a14;
+}
+
+.project-card-real-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.featured-quest-card:hover .project-card-real-img {
+  transform: scale(1.04);
+}
+
+.quest-tags-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .featured-quest-card {
+    grid-template-columns: 1fr;
+  }
+  .featured-quest-card .project-preview {
+    height: 220px;
+    border-right: none;
+    border-bottom: 3px solid #000;
+  }
+}
+
 /* Project Preview Placeholder (Pixel Graphic Canvas/Art) */
 .project-preview {
   height: 160px;
