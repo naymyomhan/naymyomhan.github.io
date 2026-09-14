@@ -3,301 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rivo AI - Content Creation Studio | Nay Myo Mhan</title>
-  <meta name="description" content="Case study and architectural breakdown for Rivo AI - All-in-one AI content creation platform engineered by Nay Myo Mhan.">
+  <title>Quest #01: Rivo AI | Nay Myo Mhan - Developer Portfolio</title>
+  <meta name="description" content="Quest details and engineering summary for Rivo AI by Nay Myo Mhan.">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230a0914'/><rect x='3' y='3' width='10' height='10' rx='2' fill='%23a38cf3'/><polygon points='6,5 11,8 6,11' fill='%230a0914'/></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230b0c14'/><rect x='2' y='4' width='12' height='8' fill='%232a2e47'/><rect x='4' y='7' width='3' height='2' fill='%2300f0ff'/><rect x='5' y='6' width='1' height='4' fill='%2300f0ff'/><rect x='10' y='6' width='2' height='2' fill='%23ff0055'/><rect x='11' y='8' width='2' height='2' fill='%23ffcc00'/></svg>">
 
-  <!-- Dedicated Stylesheet -->
-  <link rel="stylesheet" href="rivo-ai.css?v=2.3">
+  <!-- Core Pixel Art Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css?v=2.3">
 </head>
 <body>
 
-  <!-- Ambient Cyber Lighting -->
-  <div class="ambient-glow-1" aria-hidden="true"></div>
-  <div class="ambient-glow-2" aria-hidden="true"></div>
+  <!-- CRT Curved Screen & Scanline Effect Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <!-- Retro Cyber Glitch Overlay -->
+  <div class="crt-glitch-bar" aria-hidden="true"></div>
 
-  <div class="container">
+  <!-- Main Container -->
+  <div class="container" style="padding-top: 24px; padding-bottom: 40px;">
 
-    <!-- Top Navigation HUD -->
-    <header class="top-nav">
-      <div class="nav-left">
-        <a href="../index.html#projects" class="btn-back">
-          <span>◀</span> QUEST LOG
+    <!-- Top Retro HUD Navigation -->
+    <header class="retro-hud" style="margin-bottom: 24px;">
+      <nav class="hud-bar" aria-label="Main Navigation">
+        <a href="../index.html" class="hud-logo">
+          <span>👾</span> <span class="glitch-text" data-text="NAY MYO MHAN">NAY MYO MHAN</span> <span class="blink">_</span>
         </a>
-        <div class="nav-breadcrumbs">
-          PORTFOLIO / QUESTS / <span>RIVO AI</span>
+
+        <ul class="hud-nav">
+          <li><a href="../index.html" class="hud-link">[ 🏠 HOME ]</a></li>
+          <li><a href="../index.html#projects" class="hud-link active">[ ◀ BACK TO QUESTS ]</a></li>
+          <li><a href="../index.html#contact" class="hud-link">[ 📜 CONTACT ]</a></li>
+        </ul>
+
+        <div class="hud-controls">
+          <button id="toggle-sound" class="hud-icon-btn" title="Toggle 8-bit Audio">
+            <span>🔊</span> SFX: ON
+          </button>
+          <button id="toggle-theme" class="hud-icon-btn" title="Switch Color Palette">
+            <span>🎨</span> ARCADE
+          </button>
+          <button id="toggle-crt" class="hud-icon-btn" title="Toggle CRT Scanlines">
+            <span>📺</span> CRT: ON
+          </button>
+          <button id="toggle-glitch" class="hud-icon-btn glitch-active-btn" title="Toggle Retro Cyber Glitch">
+            <span>⚡</span> GLITCH: ON
+          </button>
         </div>
-      </div>
-      <div class="nav-actions">
-        <a href="https://rivoai.app/" target="_blank" rel="noopener noreferrer" class="btn-live-launch">
-          <span>🚀</span> LAUNCH APP
-        </a>
-      </div>
+      </nav>
     </header>
 
-    <!-- Project Hero Header -->
-    <section class="project-hero">
-      <div class="hero-badge-strip">
-        <span class="status-badge-live">
-          <span class="live-dot"></span> LIVE IN PRODUCTION
-        </span>
-        <span class="meta-pill">▲ NEXT.JS (APP ROUTER)</span>
-        <span class="meta-pill">⚡ GOOGLE GEMINI AI</span>
-        <span class="meta-pill">🎙️ AUDIO &amp; VIDEO PIPELINE</span>
+    <!-- Breadcrumbs Navigation -->
+    <div style="font-family: var(--font-pixel); font-size: 0.65rem; color: var(--color-cyan); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+      <a href="../index.html#projects" style="color: var(--text-muted); text-decoration: none;">PORTFOLIO</a>
+      <span style="color: var(--color-primary);">&gt;&gt;</span>
+      <a href="../index.html#projects" style="color: var(--text-muted); text-decoration: none;">QUEST LOG</a>
+      <span style="color: var(--color-primary);">&gt;&gt;</span>
+      <span style="color: var(--color-gold);">QUEST #01: RIVO AI</span>
+    </div>
+
+    <!-- Main Quest Detail Box (Pixel Art Style) -->
+    <article class="pixel-box quest-detail-card">
+      
+      <!-- Quest Header -->
+      <div class="quest-header-bar">
+        <div class="quest-id-group">
+          <span class="pixel-badge badge-cyan">QUEST #01</span>
+          <span class="pixel-badge badge-green">● LIVE IN PRODUCTION</span>
+          <span class="pixel-badge badge-gold">AI CONTENT PLATFORM</span>
+        </div>
+        <h1 class="quest-title">
+          <span class="glitch-text" data-text="RIVO AI: INTELLIGENT CONTENT STUDIO">RIVO AI: INTELLIGENT CONTENT STUDIO</span>
+        </h1>
+        <p class="quest-subtitle">
+          An all-in-one AI platform engineered for video creators, podcasters, and digital editors to streamline transcription, voice cloning, recap synthesis, and viral clip generation.
+        </p>
       </div>
 
-      <h1 class="project-headline">
-        Rivo AI: Intelligent Content Studio
-      </h1>
-
-      <p class="project-tagline">
-        An all-in-one generative AI content suite tailored for creators, video editors, and digital storytellers. Automates video recap synthesis, neural voice generation, custom voice cloning, bilingual subtitle transcription, and viral media highlight extraction.
-      </p>
-
-      <!-- Quick Metrics Grid -->
-      <div class="quick-metrics-grid">
-        <div class="metric-card">
-          <div class="metric-label">AI Tool Modules</div>
-          <div class="metric-value highlight">15+ Tools</div>
+      <!-- Authentic Screenshot Arcade Frame -->
+      <div class="quest-screenshot-box">
+        <div class="screenshot-bar">
+          <span class="bar-dot"></span>
+          <span>FEED: HTTPS://RIVOAI.APP [LIVE PRODUCTION PREVIEW]</span>
         </div>
-        <div class="metric-card">
-          <div class="metric-label">AI Engine</div>
-          <div class="metric-value">Gemini 1.5</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-label">Core Stack</div>
-          <div class="metric-value">Next.js &bull; Tailwind</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-label">Deployment</div>
-          <div class="metric-value highlight">Cloud SaaS</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Real Website Screenshot Showcase -->
-    <section class="showcase-section">
-      <div class="section-head">
-        <div class="section-title-tag">
-          <span>📸</span> REAL PLATFORM SCREENSHOT
-        </div>
-        <a href="https://rivoai.app/" target="_blank" rel="noopener noreferrer" class="btn-live-launch" style="font-size: 0.65rem; padding: 8px 14px;">
-          <span>🌐</span> rivoai.app
-        </a>
+        <img src="../images/rivo-real.png" alt="Rivo AI Live Application Interface" class="quest-screenshot-img">
       </div>
 
-      <!-- Main Dashboard Real Screenshot Window -->
-      <div class="screenshot-container">
-        <div class="window-titlebar">
-          <div class="window-dots">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-          </div>
-          <div class="window-url-bar">
-            <span class="lock-icon">🔒</span>
-            <span>https://rivoai.app</span>
-          </div>
-          <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-cyan);">
-            PRODUCTION
-          </div>
-        </div>
-
-        <img src="../images/rivo-real.png" alt="Rivo AI Live Production Dashboard Screenshot" class="screenshot-hero-img">
-
-        <div class="screenshot-caption">
-          <div>
-            <strong>Live Dashboard View:</strong> Features modern navigation sidebar with Audio Studio, Recap Studio, Voice Clone, One-Click Recap, and real-time usage monitoring.
-          </div>
-          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-cyan);">
-            Direct Capture &bull; 100% Real
-          </div>
-        </div>
-      </div>
-
-      <!-- Secondary Real Screenshot Grid -->
-      <div class="screenshots-grid">
-        <div class="screenshot-subcard">
-          <img src="../images/rivo-login.png" alt="Rivo AI Authentication and Brand Hero Screenshot">
-          <div class="screenshot-subcard-info">
-            <h3 class="screenshot-subcard-title">Landing &amp; Content Studio Entry</h3>
-            <p class="screenshot-subcard-desc">
-              "ဗီဒီယိုရှည်များကို စိတ်ဝင်စားဖွယ် Recap များအဖြစ် ပြောင်းလဲလိုက်ပါ" — Brand hero presentation, Google OAuth &amp; credentials authentication, and creator onboarding.
+      <!-- Concise 2-Column Quest Content Grid -->
+      <div class="quest-content-grid">
+        
+        <!-- Column 1: Brief & Engineering Role -->
+        <div class="quest-col">
+          <h2 class="quest-section-heading">
+            <span>📜</span> QUEST BRIEF &amp; DEV ROLE
+          </h2>
+          <div class="quest-text-block">
+            <p>
+              <strong>Mission:</strong> Eliminate tedious post-production workflows by providing creators with an integrated AI workspace that transforms raw video and audio into publish-ready assets within minutes.
+            </p>
+            <p>
+              <strong>Engineering Role:</strong> Lead Full-Stack Architect. Engineered the end-to-end system including responsive UI/UX, Google Gemini multimodal API integrations, speech-to-text pipeline, and fast serverless rendering infrastructure.
             </p>
           </div>
-        </div>
 
-        <div class="screenshot-subcard">
-          <div style="padding: 24px; background: rgba(18, 17, 28, 0.95); height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div style="font-family: var(--font-pixel); font-size: 0.75rem; color: var(--color-violet); margin-bottom: 12px;">
-                ⚡ THE CREATOR'S CHALLENGE
-              </div>
-              <h3 class="screenshot-subcard-title" style="font-size: 1.2rem; margin-bottom: 12px;">
-                Solving Manual Editing Bottlenecks
-              </h3>
-              <p class="screenshot-subcard-desc" style="font-size: 0.92rem; margin-bottom: 14px;">
-                Content creators typically spend 4 to 8 hours manually slicing long videos, writing scripts, recording voiceovers, and aligning subtitle timestamps.
-              </p>
-              <p class="screenshot-subcard-desc" style="font-size: 0.92rem;">
-                <strong>Rivo AI</strong> consolidates this entire pipeline into automated one-click workflows, reducing turnaround time from hours to minutes.
-              </p>
-            </div>
-            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; gap: 8px; flex-wrap: wrap;">
-              <span class="meta-pill" style="font-size: 0.72rem;">⏱️ 85% TIME SAVED</span>
-              <span class="meta-pill" style="font-size: 0.72rem;">🇲🇲 BILINGUAL SUPPORT</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Core Features Matrix -->
-    <section class="features-section">
-      <div class="section-head">
-        <div class="section-title-tag">
-          <span>🛠️</span> CORE PLATFORM CAPABILITIES
-        </div>
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon-bubble">🎬</div>
-          <h3 class="feature-title">One-Click Video Recap</h3>
-          <p class="feature-desc">
-            Automatically extracts long-form video keyframes, generates concise storytelling scripts, and edits viral-ready condensed recap videos with dynamic audio pacing.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-bubble">🎙️</div>
-          <h3 class="feature-title">AI Voiceover &amp; Voice Clone</h3>
-          <p class="feature-desc">
-            Studio-quality neural speech synthesis with natural inflection for Myanmar and English narration. Features custom voice cloning to replicate creator voice personas.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-bubble">📝</div>
-          <h3 class="feature-title">Auto Subtitles &amp; SRT Translation</h3>
-          <p class="feature-desc">
-            Generates frame-accurate subtitle timing from speech audio. Translates effortlessly between Myanmar and English with instant .srt export and burnt-in styling.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-bubble">⚡</div>
-          <h3 class="feature-title">Sports &amp; Game Highlights</h3>
-          <p class="feature-desc">
-            Intelligent recognition models that detect adrenaline-pumping goals, clutch plays, and match highlights in football matches and mobile esports (MLBB, PUBG).
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-bubble">🔑</div>
-          <h3 class="feature-title">BYOK Gemini Integration</h3>
-          <p class="feature-desc">
-            Built-in Bring Your Own Key architecture for Google Gemini API, allowing power users to connect their personal keys for unconstrained, ultra-low-cost content generation.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-bubble">💳</div>
-          <h3 class="feature-title">Credit Wallet &amp; Monetization</h3>
-          <p class="feature-desc">
-            Full billing ecosystem with prepaid credits, subscription tiers, granular task consumption tracking, and transparent transaction ledgers.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- System Architecture & Tech Stack -->
-    <section class="tech-section">
-      <div class="section-head">
-        <div class="section-title-tag">
-          <span>📐</span> ENGINEERING &amp; ARCHITECTURE
-        </div>
-      </div>
-
-      <div class="tech-layout-grid">
-        <!-- Panel 1: Frontend & Interface -->
-        <div class="tech-panel">
-          <div class="tech-panel-header">
-            <span>🖥️</span> CLIENT-SIDE ARCHITECTURE
-          </div>
-          <div class="tech-list">
-            <div class="tech-item">
-              <span class="tech-item-badge">Next.js 14/15</span>
-              <div class="tech-item-text">
-                App Router architecture utilizing React Server Components for ultra-fast initial loads and seamless client hydration.
-              </div>
-            </div>
-            <div class="tech-item">
-              <span class="tech-item-badge">Tailwind CSS</span>
-              <div class="tech-item-text">
-                Custom glassmorphic design system with responsive sidebar layouts and dark-mode neon aesthetics.
-              </div>
-            </div>
-            <div class="tech-item">
-              <span class="tech-item-badge">Web Audio API</span>
-              <div class="tech-item-text">
-                Client-side audio waveform previews, volume normalization, and real-time playback control.
-              </div>
+          <div class="quest-tech-section">
+            <span class="quest-tech-label">[ EQUIPPED TECH STACK ]</span>
+            <div class="inventory-items" style="margin-top: 6px;">
+              <span class="item-badge"><span>▲</span> Next.js 14</span>
+              <span class="item-badge"><span>TS</span> TypeScript</span>
+              <span class="item-badge"><span>⚡</span> Gemini AI</span>
+              <span class="item-badge"><span>🎨</span> Tailwind CSS</span>
+              <span class="item-badge"><span>🎙️</span> Web Audio</span>
+              <span class="item-badge"><span>☁️</span> Vercel Cloud</span>
             </div>
           </div>
         </div>
 
-        <!-- Panel 2: AI Core & Backend -->
-        <div class="tech-panel">
-          <div class="tech-panel-header">
-            <span>🧠</span> AI &amp; MEDIA PROCESSING
-          </div>
-          <div class="tech-list">
-            <div class="tech-item">
-              <span class="tech-item-badge">Google Gemini</span>
-              <div class="tech-item-text">
-                Multi-modal understanding for long-context script extraction, scene reasoning, and automated translation.
+        <!-- Column 2: Core Modules & Features -->
+        <div class="quest-col">
+          <h2 class="quest-section-heading">
+            <span>⚡</span> CORE MODULES
+          </h2>
+          <ul class="quest-feature-list">
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🎬</span>
+              <div>
+                <strong>AI Video Recap:</strong> Automatically condenses long video footage into accurate chapter breakdowns, key insights, and timestamps.
               </div>
-            </div>
-            <div class="tech-item">
-              <span class="tech-item-badge">FFmpeg Pipeline</span>
-              <div class="tech-item-text">
-                Server-side audio demuxing, video slicing, subtitle burn-in, and high-performance video transcoding.
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🎙️</span>
+              <div>
+                <strong>Neural Voice &amp; Cloning:</strong> Multi-speaker AI narration with expressive tone synthesis and voice cloning capabilities.
               </div>
-            </div>
-            <div class="tech-item">
-              <span class="tech-item-badge">Neural TTS</span>
-              <div class="tech-item-text">
-                High-fidelity voice synthesis with accurate tonal pitch for Burmese and multilingual content.
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">📝</span>
+              <div>
+                <strong>Auto Subtitles &amp; SRT:</strong> Fast multilingual speech-to-text alignment with synchronized subtitle downloads.
               </div>
-            </div>
-          </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">✂️</span>
+              <div>
+                <strong>Viral Clips Extractor:</strong> Detects engaging segments and auto-frames vertical shorts for TikTok and Reels.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">⚡</span>
+              <div>
+                <strong>Fast Cloud Pipeline:</strong> Streaming processing architecture ensuring low-latency rendering and high availability.
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- Bottom CTA Banner -->
-    <div class="detail-cta-box">
-      <h2 class="cta-title">Ready to Experience Rivo AI?</h2>
-      <p class="cta-desc">
-        Explore the live production web application, test the AI content generation tools, or connect with me to discuss full-stack engineering collaborations.
-      </p>
-      <div class="cta-actions">
-        <a href="https://rivoai.app/" target="_blank" rel="noopener noreferrer" class="btn-primary-glow">
-          <span>🚀</span> LAUNCH RIVO AI APP
+      </div>
+
+      <!-- Action Footer Links -->
+      <div class="quest-footer-actions">
+        <a href="https://rivoai.app/" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-primary">
+          <span>🚀</span> VISIT LIVE APP (RIVOAI.APP)
         </a>
-        <a href="../index.html#contact" class="btn-secondary-ghost">
+        <a href="../index.html#projects" class="pixel-btn">
+          <span>◀</span> BACK TO QUEST LOG
+        </a>
+        <a href="../index.html#contact" class="pixel-btn pixel-btn-secondary">
           <span>📬</span> CONTACT DEVELOPER
         </a>
-        <a href="../index.html#projects" class="btn-secondary-ghost">
-          <span>◀</span> BACK TO PORTFOLIO
+      </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="retro-footer" style="margin-top: 32px;">
+      <div class="pixel-box footer-box">
+        <div class="footer-arcade-text">
+          ★ PRESS START TO CONTINUE ★
+        </div>
+        <p class="footer-copy">
+          &copy; 2026 Nay Myo Mhan &bull; Pixel Art Portfolio &bull; All Rights Reserved
+        </p>
+        <a href="../index.html" class="pixel-btn pixel-btn-sm" style="margin-top: 6px;">
+          <span>🏠</span> RETURN TO MAIN HUB
         </a>
       </div>
-    </div>
+    </footer>
 
   </div>
 
+  <!-- Main JavaScript -->
+  <script src="../js/main.js?v=2.3"></script>
 </body>
 </html>

@@ -220,7 +220,8 @@
       toast.id = 'lofi-track-toast';
       document.body.appendChild(toast);
     }
-    toast.innerHTML = `<div class="toast-cat-frame"><img src="images/bongo-cat.gif" alt="Bongo Cat" class="toast-cat-gif"></div><div class="toast-track-info"><span class="toast-note">♫</span> <span>TRACK [${currentTrackIndex + 1}/${lofiTracks.length}]:</span> <strong>${title}</strong></div>`;
+    const imgPrefix = window.location.pathname.includes('/projects/') ? '../' : '';
+    toast.innerHTML = `<div class="toast-cat-frame"><img src="${imgPrefix}images/bongo-cat.gif" alt="Bongo Cat" class="toast-cat-gif"></div><div class="toast-track-info"><span class="toast-note">♫</span> <span>TRACK [${currentTrackIndex + 1}/${lofiTracks.length}]:</span> <strong>${title}</strong></div>`;
     toast.classList.remove('show');
     void toast.offsetWidth; // Trigger reflow for animation
     toast.classList.add('show');
