@@ -1,426 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nay Myo Mhan — Software Engineer & Captain of Backbenchers Studio</title>
-    <meta name="description" content="Nay Myo Mhan (Thiha Lynn) — full-stack developer. Three-sword style: clean cuts across web, mobile &amp; AI. Laravel, Node, React, Flutter, Python. The path of the blade.">
-    <meta name="author" content="Nay Myo Mhan">
-    <meta name="theme-color" content="#0a0f0d">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://naymyomhan.github.io/">
-    <meta property="og:title" content="Nay Myo Mhan — Software Engineer & Full-Stack Developer">
-    <meta property="og:description" content="Full-stack developer — clean cuts across web, mobile &amp; AI. No wasted strikes, no retreat. The path of the blade. ⚔️">
-    <meta property="og:image" content="https://naymyomhan.github.io/images/og-nay-poster.jpg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:secure_url" content="https://naymyomhan.github.io/images/og-nay-poster.jpg">
-    <meta property="og:image:alt" content="WANTED — Nay D. Myo Mhan — ฿1,111,000,000 — Software Engineer">
-    <link rel="image_src" href="https://naymyomhan.github.io/images/og-nay-poster.jpg">
-    <link rel="canonical" href="https://naymyomhan.github.io/">
-    <meta name="robots" content="index,follow">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nay Myo Mhan — Software Engineer & Full-Stack Developer">
-    <meta name="twitter:description" content="Full-stack developer — clean cuts across web, mobile &amp; AI. The path of the blade. ⚔️">
-    <meta name="twitter:image" content="https://naymyomhan.github.io/images/og-nay-poster.jpg">
-    <meta name="twitter:image:alt" content="WANTED — Nay D. Myo Mhan — Software Engineer">
-    <meta property="og:site_name" content="Nay Myo Mhan">
-    <meta property="og:locale" content="en_US">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/jolly-roger-cyber-nobg.png">
-    <link rel="apple-touch-icon" href="images/jolly-roger-cyber-nobg.png">
-    <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('pirate-theme')||'dark')</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nay Myo Mhan | Pixel Art Developer Portfolio</title>
+  <meta name="description" content="Personal retro 8-bit pixel art portfolio for Nay Myo Mhan - Software Engineer & Full-Stack Developer.">
+  
+  <!-- Favicon (Pixel Gamepad SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230b0c14'/><rect x='2' y='4' width='12' height='8' fill='%232a2e47'/><rect x='4' y='7' width='3' height='2' fill='%2300f0ff'/><rect x='5' y='6' width='1' height='4' fill='%2300f0ff'/><rect x='10' y='6' width='2' height='2' fill='%23ff0055'/><rect x='11' y='8' width='2' height='2' fill='%23ffcc00'/></svg>">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Preloader — Hoist the Colors -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-inner">
-            <div class="preloader-logo-wrap">
-                <img src="images/jolly-roger-cyber-nobg.png" alt="" class="preloader-logo">
-                <div class="preloader-ring"></div>
-            </div>
-            <div class="preloader-title">BACKBENCHERS PIRATES</div>
-            <div class="preloader-bar"><span id="preloaderBar"></span></div>
-            <div class="preloader-text" id="preloaderText">Drawing the blades...</div>
+
+  <!-- CRT Curved Screen & Scanline Effect Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <!-- Retro Cyber Glitch Overlay -->
+  <div class="crt-glitch-bar" aria-hidden="true"></div>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Top Retro HUD Navigation -->
+    <header class="retro-hud">
+      <nav class="hud-bar" aria-label="Main Navigation">
+        <a href="#hero" class="hud-logo">
+          <span>👾</span> <span class="glitch-text" data-text="NAY MYO MHAN">NAY MYO MHAN</span> <span class="blink">_</span>
+        </a>
+
+        <ul class="hud-nav">
+          <li><a href="#hero" class="hud-link active">[ 🏠 HOME ]</a></li>
+          <li><a href="#projects" class="hud-link">[ ⚔️ QUESTS ]</a></li>
+          <li><a href="#skills" class="hud-link">[ 🎒 GEAR ]</a></li>
+          <li><a href="#contact" class="hud-link">[ 📜 CONTACT ]</a></li>
+        </ul>
+
+        <div class="hud-controls">
+          <button id="toggle-bgm" class="hud-icon-btn playing" title="Toggle Lo-Fi Background Music">
+            <span class="bgm-icon">🎵</span> BGM: ON
+            <span class="bgm-bars" aria-hidden="true">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </span>
+          </button>
+          <button id="next-bgm" class="hud-icon-btn" title="Skip to Next Random Lo-Fi Song" aria-label="Next Random Lo-Fi Song">
+            <span>⏭️</span>
+          </button>
+          <button id="toggle-sound" class="hud-icon-btn" title="Toggle 8-bit Audio">
+            <span>🔊</span> SFX: ON
+          </button>
+          <button id="toggle-theme" class="hud-icon-btn" title="Switch Color Palette">
+            <span>🎨</span> ARCADE
+          </button>
+          <button id="toggle-crt" class="hud-icon-btn" title="Toggle CRT Scanlines">
+            <span>📺</span> CRT: ON
+          </button>
+          <button id="toggle-glitch" class="hud-icon-btn glitch-active-btn" title="Toggle Retro Cyber Glitch">
+            <span>⚡</span> GLITCH: ON
+          </button>
         </div>
-    </div>
-
-    <!-- Cinematic overlays -->
-    <div class="grain-overlay" aria-hidden="true"></div>
-    <div class="vignette-overlay" aria-hidden="true"></div>
-
-    <!-- Ocean waves background -->
-    <div class="ocean-bg">
-        <div class="wave wave-1"></div>
-        <div class="wave wave-2"></div>
-        <div class="wave wave-3"></div>
-    </div>
-    <div class="particles" id="particles"></div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <img src="images/jolly-roger-cyber-nobg.png" alt="Backbenchers Jolly Roger" class="nav-logo-img">
-                <span class="logo-text">Backbenchers Pirates</span>
-            </a>
-            <div class="nav-links" id="navLinks">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">Path</a>
-                <a href="#experience" class="nav-link">Voyage</a>
-                <a href="#skills" class="nav-link">Three Swords</a>
-                <a href="#blog" class="nav-link">Dojo Scrolls</a>
-                <a href="#contact" class="nav-link">Challenge Me</a>
-            </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+      </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section id="hero" class="hero-section">
+      <div class="pixel-box hero-card">
+        
+        <!-- Left: Character Frame & Stats -->
+        <div class="character-box">
+          <div class="character-sprite-frame" title="Click character for +100 EXP!">
+            <!-- Pixel Art Profile Avatar -->
+            <img src="images/profile.png" alt="Nay Myo Mhan Pixel Avatar" class="pixel-character">
+          </div>
+
+          <!-- RPG Stats Bars -->
+          <div class="stat-bars">
+            <div class="stat-item">
+              <span class="stat-label hp">HP</span>
+              <div class="bar-container">
+                <div class="bar-fill hp" title="Health: 100%"></div>
+              </div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label mp">MP</span>
+              <div class="bar-container">
+                <div class="bar-fill mp" title="Mana / Caffeine: 85%"></div>
+              </div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label xp">XP</span>
+              <div class="bar-container">
+                <div class="bar-fill xp" title="Experience Points: Level 99"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Player Intro Content -->
         <div class="hero-content">
-            <div class="hero-text-side">
-                <div class="hero-badge animate-fade-up">
-                    <span class="badge-dot"></span>
-                    Nothing happened. — still shipping ⚔️
-                </div>
-                <h1 class="hero-title animate-fade-up delay-1">
-                    I'm <span class="pirate-text">Nay Myo Mhan</span>
-                    <span class="hero-alias">a.k.a. Thiha Lynn — the Pirate Hunter ⚔️</span>
-                </h1>
-                <div class="hero-bounty animate-fade-up delay-2">
-                    <div class="bounty-poster-frame" id="bountyPoster">
-                        <img src="images/nay-bounty-poster.png" alt="WANTED — Nay D. Myo Mhan — ฿1,111,000,000" class="bounty-poster-img">
-                        <div class="bounty-shine"></div>
-                    </div>
-                </div>
-                <div class="hero-typewriter animate-fade-up delay-3">
-                    <span class="typewriter-prefix">Vow: </span>
-                    <span class="typewriter-text" id="typewriter"></span>
-                    <span class="typewriter-cursor">▌</span>
-                </div>
-                <p class="hero-description animate-fade-up delay-4">
-                    I cut problems down clean — no wasted strikes, no retreat. A full-stack blade:
-                    Laravel &amp; Node back-ends, React on the front, Flutter on mobile. Right now I'm
-                    carving production at <a href="https://coosy.co.jp/" target="_blank" rel="noopener" class="inline-link">Coosy</a> (Japan),
-                    sharpening from Maesot, Thailand. ⚔️
-                </p>
-                <div class="hero-cta animate-fade-up delay-5">
-                    <a href="#blog" class="btn btn-primary">
-                        <span>📜 Dojo Scrolls</span>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <span>⚔️ Challenge Me</span>
-                    </a>
-                </div>
-                <div class="hero-stats animate-fade-up delay-5">
-                    <div class="stat">
-                        <span class="stat-number" data-count="7">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label">Years Coding</span>
-                    </div>
-                    <div class="stat-divider">⚓</div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="5">0</span>
-                        <span class="stat-label">Ports Sailed</span>
-                    </div>
-                    <div class="stat-divider">⚓</div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="9">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label">Languages &amp; Frameworks</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image-side animate-fade-up delay-2">
-                <div class="hero-image-frame">
-                    <img src="images/profile-nay-band.jpg" alt="Nay Myo Mhan — Web &amp; Mobile Developer" class="hero-image">
-                    <div class="hero-image-glow"></div>
-                </div>
-            </div>
+          <div class="hero-pretitle">
+            <span class="pixel-badge badge-green">● PLAYER 1 CONNECTED</span>
+            <span>PRESS START</span>
+          </div>
+
+          <h1 class="hero-name">
+            HI, I'M <span class="glitch-text" data-text="NAY MYO MHAN">NAY MYO MHAN</span>
+          </h1>
+
+          <div class="hero-role">
+            <span>⚔️</span> FULL-STACK DEVELOPER &amp; GAME CREATOR
+          </div>
+
+          <p class="hero-bio">
+            Full-stack engineer crafting high-performance web systems and interactive digital worlds with <strong>PHP (Laravel)</strong>, <strong>JavaScript (Next.js, React)</strong>, and <strong>C# (Unity)</strong>. Delivering robust backends, sleek UIs, and engaging gameplay.
+          </p>
+
+          <div class="hero-tags">
+            <span class="pixel-badge badge-green">🐘 PHP &bull; LARAVEL</span>
+            <span class="pixel-badge badge-cyan">▲ NEXT.JS &bull; JS</span>
+            <span class="pixel-badge badge-gold">🎮 C# &bull; UNITY</span>
+            <span class="pixel-badge">LEVEL 99 DEV</span>
+            <span class="pixel-badge badge-red">● OPEN FOR WORK</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="pixel-btn pixel-btn-primary">
+              <span>🏆</span> VIEW QUESTS
+            </a>
+            <a href="#skills" class="pixel-btn pixel-btn-secondary">
+              <span>🎒</span> SKILLS
+            </a>
+            <a href="#contact" class="pixel-btn">
+              <span>📬</span> CONTACT
+            </a>
+          </div>
         </div>
-        <div class="hero-scroll-indicator">
-            <div class="scroll-compass">⚓</div>
-            <span>Dive Deeper</span>
-        </div>
+
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">〜 The Swordsman's Path 〜</span>
-                <h2 class="section-title">The Path I <span class="pirate-text">Walk</span></h2>
-                <p class="section-subtitle">Every blade has a story. Here's how mine was forged.</p>
+    <!-- Projects Section / Quest Log -->
+    <section id="projects" class="section-wrapper">
+      
+      <!-- Section Header -->
+      <div class="pixel-box section-head-box">
+        <!-- Bongo Cat Jamming on the Quest Log Header Border -->
+        <div class="bongo-cat-wrapper" title="Bongo Cat jamming to the Lo-Fi beats!">
+          <span class="bongo-music-note">♫♪</span>
+          <div class="bongo-cat-frame">
+            <img src="images/bongo-cat.gif" alt="Bongo Cat Jamming" class="bongo-cat-gif">
+          </div>
+        </div>
+
+        <div class="section-title-group">
+          <h2 class="section-title">
+            <span>🏆</span> <span class="glitch-text" data-text="QUEST LOG: PROJECTS">QUEST LOG: PROJECTS</span>
+          </h2>
+          <p class="section-subtitle">
+            Selected coding quests and applications. Easily customize placeholders with your own creations!
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-bar" role="group" aria-label="Project Category Filter">
+          <button class="filter-btn active" data-filter="all">[ ALL ]</button>
+          <button class="filter-btn" data-filter="web">[ WEB APPS ]</button>
+          <button class="filter-btn" data-filter="games">[ GAMES ]</button>
+          <button class="filter-btn" data-filter="tools">[ TOOLS ]</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- Project 1: Next.js Web App -->
+        <article class="project-card" data-category="web">
+          <div class="project-preview">
+            <span class="preview-quest-num">QUEST #01</span>
+            <span class="pixel-badge badge-green preview-badge-status">COMPLETED</span>
+            <div class="project-preview-art">
+              <!-- Pixel Art Web Window SVG -->
+              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                <rect x="2" y="4" width="28" height="24" fill="#1a1d30"/>
+                <rect x="2" y="4" width="28" height="5" fill="#2d3352"/>
+                <rect x="5" y="6" width="2" height="2" fill="#ff0055"/>
+                <rect x="9" y="6" width="2" height="2" fill="#ffcc00"/>
+                <rect x="13" y="6" width="2" height="2" fill="#39ff14"/>
+                <rect x="6" y="12" width="8" height="4" fill="#00f0ff"/>
+                <rect x="16" y="12" width="10" height="2" fill="#ffcc00"/>
+                <rect x="16" y="15" width="6" height="1" fill="#f0f4fc"/>
+                <rect x="6" y="18" width="20" height="7" fill="#101221"/>
+                <rect x="8" y="20" width="5" height="3" fill="#39ff14"/>
+                <rect x="15" y="20" width="5" height="3" fill="#00f0ff"/>
+              </svg>
             </div>
-            <p class="about-intro">
-                I'm <strong>Nay Myo Mhan</strong> — a web &amp; mobile developer who drew first blade in Yangon and
-                now sharpens from <strong>Maesot, Thailand</strong>. Seven years on the path: fintech wallets,
-                NGO fundraising apps, real-time systems, my own image-CDN server. I fight <strong>full-stack</strong> —
-                Laravel &amp; Node, React &amp; Flutter, with Python, C# and a taste for IoT. I don't lose to the
-                same problem twice.
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Next.js Full-Stack App</h3>
+            <p class="project-desc">
+              High-performance web application built with Next.js, featuring server-side rendering, responsive Tailwind UI components, and smooth API integration.
             </p>
-            <div class="about-grid">
-                <div class="about-card treasure-card">
-                    <div class="about-icon">🏆</div>
-                    <h3>My Vow</h3>
-                    <p>Be the best — full stop. Build software sharp enough to cut through any problem, and never lose to the same bug twice. No retreat, no excuses.</p>
-                </div>
-                <div class="about-card treasure-card">
-                    <div class="about-icon">⚡</div>
-                    <h3>Enma's Edge</h3>
-                    <p>AI is my Enma — raw power that drains you if you can't control it. I wield Claude Opus deliberately: faster strikes, never sloppier ones.</p>
-                </div>
-                <div class="about-card treasure-card">
-                    <div class="about-icon">🗡️</div>
-                    <h3>What I Cut Down</h3>
-                    <p>Web apps (Laravel · Node · React), mobile (Flutter · Firebase), real-time systems, APIs hardened to OWASP Top 10 — and a custom CDN server carved in Python.</p>
-                </div>
+            <div class="project-tech-tags">
+              <span class="tech-tag">#NEXTJS</span>
+              <span class="tech-tag">#JAVASCRIPT</span>
+              <span class="tech-tag">#TAILWIND</span>
             </div>
-        </div>
+            <div class="project-actions">
+              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
+                <span>🎮</span> DEMO
+              </a>
+              <a href="#" class="pixel-btn pixel-btn-sm">
+                <span>📂</span> CODE
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Unity Game -->
+        <article class="project-card" data-category="games">
+          <div class="project-preview">
+            <span class="preview-quest-num">QUEST #02</span>
+            <span class="pixel-badge badge-gold preview-badge-status">FEATURED</span>
+            <div class="project-preview-art">
+              <!-- Pixel Art Gamepad SVG -->
+              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                <rect x="4" y="9" width="24" height="14" fill="#242842"/>
+                <rect x="6" y="7" width="20" height="18" fill="#2d3352"/>
+                <rect x="8" y="14" width="6" height="4" fill="#131624"/>
+                <rect x="9" y="13" width="4" height="6" fill="#131624"/>
+                <rect x="10" y="15" width="2" height="2" fill="#00f0ff"/>
+                <rect x="19" y="16" width="3" height="3" fill="#ff0055"/>
+                <rect x="23" y="13" width="3" height="3" fill="#ffcc00"/>
+                <rect x="14" y="19" width="4" height="2" fill="#39ff14"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Unity 2D/3D Action Game</h3>
+            <p class="project-desc">
+              Interactive game created in Unity &amp; C#, featuring custom player controller physics, particle visual effects, combat systems, and dynamic audio soundscapes.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">#UNITY</span>
+              <span class="tech-tag">#CSHARP</span>
+              <span class="tech-tag">#GAMEDEV</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
+                <span>🎮</span> DEMO
+              </a>
+              <a href="#" class="pixel-btn pixel-btn-sm">
+                <span>📂</span> CODE
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Laravel REST API & Microservice -->
+        <article class="project-card" data-category="tools">
+          <div class="project-preview">
+            <span class="preview-quest-num">QUEST #03</span>
+            <span class="pixel-badge badge-cyan preview-badge-status">IN DEV</span>
+            <div class="project-preview-art">
+              <!-- Pixel Art Terminal / CLI SVG -->
+              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                <rect x="4" y="5" width="24" height="22" fill="#080911"/>
+                <rect x="4" y="5" width="24" height="4" fill="#1c2035"/>
+                <rect x="6" y="6" width="2" height="2" fill="#ff0055"/>
+                <rect x="9" y="6" width="2" height="2" fill="#39ff14"/>
+                <rect x="7" y="12" width="2" height="2" fill="#39ff14"/>
+                <rect x="9" y="14" width="2" height="2" fill="#39ff14"/>
+                <rect x="7" y="16" width="2" height="2" fill="#39ff14"/>
+                <rect x="12" y="14" width="6" height="2" fill="#00f0ff"/>
+                <rect x="7" y="20" width="14" height="2" fill="#8b9bb4"/>
+                <rect x="7" y="23" width="8" height="2" fill="#ffcc00"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Laravel REST API Suite</h3>
+            <p class="project-desc">
+              Robust backend service engineered with PHP &amp; Laravel, featuring JWT authentication, automated queue jobs, and optimized MySQL queries.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">#LARAVEL</span>
+              <span class="tech-tag">#PHP</span>
+              <span class="tech-tag">#MYSQL</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
+                <span>🎮</span> DEMO
+              </a>
+              <a href="#" class="pixel-btn pixel-btn-sm">
+                <span>📂</span> CODE
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Headless Laravel + Next.js Portal -->
+        <article class="project-card" data-category="web">
+          <div class="project-preview">
+            <span class="preview-quest-num">QUEST #04</span>
+            <span class="pixel-badge badge-green preview-badge-status">COMPLETED</span>
+            <div class="project-preview-art">
+              <!-- Pixel Art Cloud / Server SVG -->
+              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                <rect x="5" y="7" width="22" height="5" fill="#20243d"/>
+                <rect x="7" y="9" width="3" height="1" fill="#39ff14"/>
+                <rect x="12" y="9" width="13" height="1" fill="#00f0ff"/>
+                <rect x="5" y="14" width="22" height="5" fill="#20243d"/>
+                <rect x="7" y="16" width="3" height="1" fill="#ffcc00"/>
+                <rect x="12" y="16" width="13" height="1" fill="#00f0ff"/>
+                <rect x="5" y="21" width="22" height="5" fill="#20243d"/>
+                <rect x="7" y="23" width="3" height="1" fill="#39ff14"/>
+                <rect x="12" y="23" width="13" height="1" fill="#00f0ff"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Laravel + Next.js Portal</h3>
+            <p class="project-desc">
+              Decoupled modern platform uniting a high-speed Next.js frontend with an enterprise Laravel backend API for optimal SEO and performance.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">#NEXTJS</span>
+              <span class="tech-tag">#LARAVEL</span>
+              <span class="tech-tag">#PHP</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
+                <span>🎮</span> DEMO
+              </a>
+              <a href="#" class="pixel-btn pixel-btn-sm">
+                <span>📂</span> CODE
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: Unity Retro Prototype -->
+        <article class="project-card" data-category="games">
+          <div class="project-preview">
+            <span class="preview-quest-num">QUEST #05</span>
+            <span class="pixel-badge badge-gold preview-badge-status">BETA</span>
+            <div class="project-preview-art">
+              <!-- Pixel Art Cassette / Synth SVG -->
+              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                <rect x="4" y="8" width="24" height="16" fill="#1b1e33"/>
+                <rect x="6" y="10" width="20" height="12" fill="#ff0055"/>
+                <rect x="8" y="12" width="16" height="8" fill="#f0f4fc"/>
+                <rect x="10" y="14" width="4" height="4" fill="#1b1e33"/>
+                <rect x="18" y="14" width="4" height="4" fill="#1b1e33"/>
+                <rect x="11" y="15" width="2" height="2" fill="#00f0ff"/>
+                <rect x="19" y="15" width="2" height="2" fill="#00f0ff"/>
+                <rect x="14" y="15" width="4" height="2" fill="#ffcc00"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Unity Pixel Adventure</h3>
+            <p class="project-desc">
+              Retro top-down pixel game prototype developed in Unity &amp; C# featuring custom tilemap collisions, enemy AI state machines, and sound effects.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">#UNITY</span>
+              <span class="tech-tag">#CSHARP</span>
+              <span class="tech-tag">#PIXEL-ART</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
+                <span>🎮</span> DEMO
+              </a>
+              <a href="#" class="pixel-btn pixel-btn-sm">
+                <span>📂</span> CODE
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: Laravel E-Commerce -->
+        <article class="project-card" data-category="web">
+          <div class="project-preview">
+            <span class="preview-quest-num">QUEST #06</span>
+            <span class="pixel-badge badge-cyan preview-badge-status">STAGED</span>
+            <div class="project-preview-art">
+              <!-- Pixel Art Robot / Automation SVG -->
+              <svg width="90" height="90" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                <rect x="15" y="4" width="2" height="4" fill="#ffcc00"/>
+                <rect x="14" y="3" width="4" height="2" fill="#ff0055"/>
+                <rect x="7" y="8" width="18" height="14" fill="#2d3352"/>
+                <rect x="9" y="11" width="4" height="3" fill="#00f0ff"/>
+                <rect x="19" y="11" width="4" height="3" fill="#00f0ff"/>
+                <rect x="11" y="17" width="10" height="2" fill="#39ff14"/>
+                <rect x="5" y="13" width="2" height="6" fill="#1a1d30"/>
+                <rect x="25" y="13" width="2" height="6" fill="#1a1d30"/>
+                <rect x="10" y="22" width="12" height="6" fill="#1b1e33"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Laravel E-Commerce Solution</h3>
+            <p class="project-desc">
+              Comprehensive web store with PHP &amp; Laravel, JavaScript-powered interactive cart and checkout, order processing, and administrative dashboard.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">#LARAVEL</span>
+              <span class="tech-tag">#PHP</span>
+              <span class="tech-tag">#JAVASCRIPT</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="pixel-btn pixel-btn-primary pixel-btn-sm">
+                <span>🎮</span> DEMO
+              </a>
+              <a href="#" class="pixel-btn pixel-btn-sm">
+                <span>📂</span> CODE
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
     </section>
 
-    <!-- Experience / Voyage Log Section -->
-    <section class="section experience" id="experience">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">〜 Logbook of Voyages 〜</span>
-                <h2 class="section-title">Ports I've <span class="pirate-text">Sailed</span></h2>
-                <p class="section-subtitle">Every battle sharpened the blade. ⚔️</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item treasure-card">
-                    <span class="timeline-dot">🏴‍☠️</span>
-                    <div class="timeline-head">
-                        <h3 class="timeline-role">Full-Stack Developer · <a href="https://coosy.co.jp/" target="_blank" rel="noopener" class="inline-link">Coosy</a></h3>
-                        <span class="timeline-date">Present · ~1 yr · Japan</span>
-                    </div>
-                    <p>Carving production web products end-to-end — clean cuts from database to UI, no wasted motion. Requirements in, shipped features out.</p>
-                    <div class="timeline-tags"><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Full-Stack</span></div>
-                </div>
-                <div class="timeline-item treasure-card">
-                    <span class="timeline-dot">⚓</span>
-                    <div class="timeline-head">
-                        <h3 class="timeline-role">Full-Stack Developer · Click2Donate</h3>
-                        <span class="timeline-date">2022 – Present</span>
-                    </div>
-                    <p>Built <em>Eain Pyan Lann</em>, a fundraising app for an NGO supporting refugees &amp; displaced communities. Laravel + Nova admin on Ubuntu / Nginx / MySQL; Flutter + Firebase mobile (migrated BLOC → Provider); plus a custom Python/Flask image-CDN with on-the-fly compression &amp; NSFW detection. Also designed &amp; built drones and trained pilots through 2021–22.</p>
-                    <div class="timeline-tags"><span class="tag">Laravel</span><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Python</span></div>
-                </div>
-                <div class="timeline-item treasure-card">
-                    <span class="timeline-dot">⚓</span>
-                    <div class="timeline-head">
-                        <h3 class="timeline-role">Lead / Backend Developer · NAOH</h3>
-                        <span class="timeline-date">2020 · Yangon</span>
-                    </div>
-                    <p>Full-stack on a mobile-wallet fintech (top-ups, deposits, transfers). Designed APIs, integrated SIM-based bill top-up via a Java server (Telenor / Ooredoo / MPT), hardened APIs to OWASP Top 10, and introduced microservices, the repository pattern &amp; polymorphic data models.</p>
-                    <div class="timeline-tags"><span class="tag">Java</span><span class="tag">APIs</span><span class="tag">Microservices</span><span class="tag">Security</span><span class="tag">IoT</span></div>
-                </div>
-                <div class="timeline-item treasure-card">
-                    <span class="timeline-dot">⚓</span>
-                    <div class="timeline-head">
-                        <h3 class="timeline-role">Web Designer &amp; Full-Stack · Hangul Co., Ltd.</h3>
-                        <span class="timeline-date">2018 – 2019 · Yangon</span>
-                    </div>
-                    <p>Designed website UI/UX and contributed to full-stack builds — bridging clean design with solid engineering.</p>
-                    <div class="timeline-tags"><span class="tag">UI/UX</span><span class="tag">Figma</span><span class="tag">Full-Stack</span></div>
-                </div>
-                <div class="timeline-item treasure-card">
-                    <span class="timeline-dot">🧭</span>
-                    <div class="timeline-head">
-                        <h3 class="timeline-role">In-house Developer · Shwe Byain Phyu</h3>
-                        <span class="timeline-date">2018 · Yangon</span>
-                    </div>
-                    <p>My first voyage — at 18, developed and maintained two company websites. Where the journey began.</p>
-                    <div class="timeline-tags"><span class="tag">Web Dev</span><span class="tag">First Crew</span></div>
-                </div>
-            </div>
-
-            <div class="sidequest-header"><span class="section-tag">〜 Side Quests &amp; Trophies 〜</span></div>
-            <div class="about-grid sidequests">
-                <div class="about-card treasure-card">
-                    <div class="about-icon">📡</div>
-                    <h3>Real-time Tech</h3>
-                    <p>WebSocket systems in Node.js, Python &amp; C# — chat, multiplayer game servers and interactive clients.</p>
-                </div>
-                <div class="about-card treasure-card">
-                    <div class="about-icon">🤖</div>
-                    <h3>Hardware &amp; IoT</h3>
-                    <p>Self-balancing robot with PID control, Raspberry Pi test servers, and Arduino home electronics driven over Bluetooth from Flutter.</p>
-                </div>
-                <div class="about-card treasure-card">
-                    <div class="about-icon">🏆</div>
-                    <h3>Trophies</h3>
-                    <p>WIT Award 2018 &amp; Game Dev Challenge 2018 (game programmer) — sharpening OOP and teamwork.</p>
-                </div>
-            </div>
+    <!-- Skills & Inventory Section -->
+    <section id="skills" class="section-wrapper">
+      <div class="pixel-box section-head-box">
+        <div class="section-title-group">
+          <h2 class="section-title">
+            <span>🎒</span> <span class="glitch-text" data-text="EQUIPPED GEAR &amp; INVENTORY">EQUIPPED GEAR &amp; INVENTORY</span>
+          </h2>
+          <p class="section-subtitle">
+            Languages, frameworks, and tools mastered on the engineering journey.
+          </p>
         </div>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Slot 1: Weapons (Languages) -->
+        <div class="inventory-slot-box">
+          <div class="inventory-header">
+            <span>🗡️</span> PRIMARY WEAPONS (LANGUAGES)
+          </div>
+          <div class="inventory-items">
+            <span class="item-badge">🐘 PHP</span>
+            <span class="item-badge">⚡ JavaScript (ES6+)</span>
+            <span class="item-badge">🎯 C# (.NET)</span>
+            <span class="item-badge">🔷 TypeScript</span>
+            <span class="item-badge">🌐 HTML5 / CSS3</span>
+            <span class="item-badge">🗄️ MySQL / SQL</span>
+          </div>
+        </div>
+
+        <!-- Slot 2: Armor (Frameworks & Engines) -->
+        <div class="inventory-slot-box">
+          <div class="inventory-header">
+            <span>🛡️</span> DEFENSIVE ARMOR (FRAMEWORKS &amp; ENGINES)
+          </div>
+          <div class="inventory-items">
+            <span class="item-badge">🔥 Laravel</span>
+            <span class="item-badge">▲ Next.js</span>
+            <span class="item-badge">⚛️ React</span>
+            <span class="item-badge">🎮 Unity (2D / 3D)</span>
+            <span class="item-badge">🚀 Node.js</span>
+            <span class="item-badge">🌊 Tailwind CSS</span>
+          </div>
+        </div>
+
+        <!-- Slot 3: Magic Items (Tools & DevOps) -->
+        <div class="inventory-slot-box">
+          <div class="inventory-header">
+            <span>🧪</span> MAGIC ITEMS (TOOLS &amp; DEVOPS)
+          </div>
+          <div class="inventory-items">
+            <span class="item-badge">🐙 Git &amp; GitHub</span>
+            <span class="item-badge">📦 Composer &amp; NPM</span>
+            <span class="item-badge">🐳 Docker</span>
+            <span class="item-badge">🎮 Unity Hub</span>
+            <span class="item-badge">💻 VS Code &amp; VS</span>
+            <span class="item-badge">🐧 Linux &amp; Nginx</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="section skills" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">〜 The Three Blades 〜</span>
-                <h2 class="section-title">Santōryū <span class="pirate-text">Arsenal</span></h2>
-                <p class="section-subtitle">Three blades. One cut.</p>
-            </div>
-            <div class="skills-categories">
-                <div class="skill-category treasure-card sword-kitetsu">
-                    <h3 class="category-title"><span class="category-icon">🩸</span> Sandai Kitetsu — Backend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PHP</span><span class="skill-tag">Laravel</span><span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">FastAPI</span><span class="skill-tag">Flask</span><span class="skill-tag">Java</span><span class="skill-tag">REST APIs</span>
-                    </div>
-                </div>
-                <div class="skill-category treasure-card sword-wado">
-                    <h3 class="category-title"><span class="category-icon">🗡️</span> Wadō Ichimonji — Frontend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">Responsive</span><span class="skill-tag">UI/UX</span>
-                    </div>
-                </div>
-                <div class="skill-category treasure-card sword-shusui">
-                    <h3 class="category-title"><span class="category-icon">🌑</span> Shusui — Mobile</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Flutter</span><span class="skill-tag">Dart</span>
-                        <span class="skill-tag">Firebase</span><span class="skill-tag">Cross-Platform</span>
-                    </div>
-                </div>
-                <div class="skill-category treasure-card sword-enma">
-                    <h3 class="category-title"><span class="category-icon">⚡</span> Enma — AI &amp; Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Claude Opus</span><span class="skill-tag">AI-Powered Dev</span>
-                        <span class="skill-tag">Prompt Engineering</span><span class="skill-tag">Photoshop</span><span class="skill-tag">Figma</span>
-                    </div>
-                </div>
-                <div class="skill-category treasure-card sword-haki">
-                    <h3 class="category-title"><span class="category-icon">🛡️</span> Armament Haki — Ops &amp; Security</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span><span class="skill-tag">Linux</span><span class="skill-tag">Nginx</span><span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">OWASP Top 10</span><span class="skill-tag">IoT</span><span class="skill-tag">Unity (C#)</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Contact / Dialog Box Section -->
+    <section id="contact" class="section-wrapper">
+      <div class="contact-dialog-box">
+        <div class="dialog-header">
+          <span class="speaker-name">NAY MYO MHAN</span>
+          <span class="pixel-badge badge-cyan">TRANSMISSION CHANNEL</span>
         </div>
+
+        <p class="dialog-speech">
+          "Have a quest, a project collaboration idea, or want to discuss engineering and retro tech? Send a transmission through any of the channels below!"
+        </p>
+
+        <div class="contact-options">
+          <a href="mailto:contact@naymyomhan.com" class="pixel-btn pixel-btn-primary">
+            <span>📧</span> EMAIL ME
+          </a>
+          <a href="https://github.com/naymyomhan" target="_blank" rel="noopener noreferrer" class="pixel-btn">
+            <span>🐙</span> GITHUB
+          </a>
+          <a href="https://linkedin.com/in/naymyomhan" target="_blank" rel="noopener noreferrer" class="pixel-btn">
+            <span>💼</span> LINKEDIN
+          </a>
+          <a href="https://t.me/naymyomhan" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-secondary">
+            <span>✈️</span> TELEGRAM
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Blog Section -->
-    <section class="section blog" id="blog">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">〜 Dojo Scrolls 〜</span>
-                <h2 class="section-title">Training <span class="pirate-text">Logs</span></h2>
-                <p class="section-subtitle">Hard lessons from the path of the blade.</p>
-            </div>
-            <div class="blog-grid">
-                <a href="blog/opus-4-6-ai-engineering.html" class="blog-card treasure-card featured">
-                    <div class="blog-card-badge">⭐ Featured</div>
-                    <div class="blog-card-image">
-                        <img src="images/hero-luffy.png" alt="Gear 5th AI Engineering" loading="lazy">
-                    </div>
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span class="blog-date">📅 Feb 7, 2026</span>
-                            <span class="blog-read-time">⏱️ 4 min</span>
-                            <span class="blog-lang">🏴‍☠️ EN</span>
-                        </div>
-                        <h3 class="blog-card-title">Opus 4.6 & The Age of AI-Powered Engineering: Real-World Conversions That Changed Everything</h3>
-                        <p class="blog-card-excerpt">How I leveraged Claude Opus to convert PHP → Node.js, upgrade Laravel 8 → 12, and build native iOS apps — all at Gear 5th speed!</p>
-                        <div class="blog-card-tags">
-                            <span class="tag">AI</span><span class="tag">Engineering</span><span class="tag">Claude Opus</span>
-                        </div>
-                        <span class="blog-card-read-more">Read the log ⛵</span>
-                    </div>
-                </a>
-                <a href="blog/opus-4-6-ai-engineering-mm.html" class="blog-card treasure-card">
-                    <div class="blog-card-image">
-                        <img src="images/luffy_sabaody_egghead.jpg" alt="Luffy — 2022 vs 2026 Engineer's Journey" loading="lazy">
-                    </div>
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span class="blog-date">📅 Feb 7, 2026</span>
-                            <span class="blog-read-time">⏱️ 4 min</span>
-                            <span class="blog-lang">🏴‍☠️ MY</span>
-                        </div>
-                        <h3 class="blog-card-title">Opus 4.6 & The Age of AI-Powered Engineering — Myanmar Edition</h3>
-                        <p class="blog-card-excerpt">The same epic AI-powered engineering journey — PHP → Node.js, Laravel 8 → 12, Android → iOS conversions — now in Myanmar language!</p>
-                        <div class="blog-card-tags">
-                            <span class="tag">AI</span><span class="tag">🏴‍☠️ MM</span>
-                        </div>
-                        <span class="blog-card-read-more">Read the log ⛵</span>
-                    </div>
-                </a>
-                <div class="blog-card treasure-card coming-soon">
-                    <div class="blog-card-image">
-                        <div class="blog-card-image-placeholder"><span>🗺️</span></div>
-                    </div>
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta"><span class="blog-date">🏴‍☠️ Coming Soon</span></div>
-                        <h3 class="blog-card-title">Building Scalable Game Backends: Navigating the New World</h3>
-                        <p class="blog-card-excerpt">A deep dive into migrating concurrent-heavy game servers — upgrading your ship for the New World.</p>
-                        <div class="blog-card-tags"><span class="tag">Node.js</span><span class="tag">Backend</span></div>
-                    </div>
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer class="retro-footer">
+      <div class="pixel-box footer-box">
+        <div class="footer-arcade-text">
+          ★ PRESS START TO CONTINUE ★
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">〜 Cross Blades 〜</span>
-                <h2 class="section-title">Challenge <span class="pirate-text">Me</span></h2>
-                <p class="section-subtitle">Got a worthy project — or a duel? Bring it. ⚔️</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-card treasure-card">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                    </div>
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/naymyomhan" target="_blank" rel="noopener" class="contact-link">@naymyomhan</a>
-                </div>
-                <div class="contact-card treasure-card">
-                    <div class="contact-icon">📧</div>
-                    <h3>Pigeon Mail</h3>
-                    <a href="mailto:naymyomhan@gmail.com" class="contact-link">naymyomhan@gmail.com</a>
-                </div>
-                <div class="contact-card treasure-card">
-                    <div class="contact-icon">🌊</div>
-                    <h3>Location</h3>
-                    <span class="contact-link">Maesot, Thailand 🇹🇭</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Floating Pirate Ship over ocean -->
-    <div class="floating-ship">
-        <img src="images/backbenchers-ship.png" alt="Backbenchers Pirate Ship" class="ship-img">
-    </div>
-    <div class="jolly-flag jolly-flag-left">
-        <img src="images/jolly-roger-cyber-nobg.png" alt="Jolly Roger" class="flag-img">
-    </div>
-    <div class="jolly-flag jolly-flag-right">
-        <img src="images/jolly-roger-cyber-nobg.png" alt="Jolly Roger" class="flag-img">
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo"><img src="images/jolly-roger-cyber-nobg.png" alt="" class="footer-logo-img"> <span class="logo-text">Backbenchers Pirates</span></div>
-                <p class="footer-text">Forged with ⚔️ &amp; sheer willpower by Nay Myo Mhan © 2026</p>
-                <div class="footer-links"><a href="https://github.com/naymyomhan" target="_blank" rel="noopener">GitHub</a></div>
-            </div>
-        </div>
+        <p class="footer-copy">
+          &copy; 2026 Nay Myo Mhan &bull; Pixel Art Portfolio &bull; Crafted with Pure Code
+        </p>
+        <a href="#hero" class="pixel-btn pixel-btn-sm" style="margin-top: 6px;">
+          <span>▲</span> BACK TO TOP
+        </a>
+      </div>
     </footer>
-    <script src="js/main.js"></script>
+
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
