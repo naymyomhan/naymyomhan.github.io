@@ -1678,5 +1678,188 @@ body.glitch-active .pixel-btn:hover {
   }
 }
 
+/* --------------------------------------------------------------------------
+   MOBILE APP SCREENSHOTS SHOWCASE (3-PHONE GRID)
+   -------------------------------------------------------------------------- */
+.mobile-screens-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.mobile-screen-frame {
+  background: #000;
+  border: 3px solid #000;
+  box-shadow: 
+    inset -2px -2px 0 0 var(--panel-bevel-dark),
+    inset 2px 2px 0 0 var(--panel-bevel-light);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-screen-caption {
+  font-family: var(--font-pixel);
+  font-size: 0.58rem;
+  color: var(--color-cyan);
+  background: #101221;
+  padding: 8px 10px;
+  text-align: center;
+  border-bottom: 2px solid #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobile-screen-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 720px) {
+  .mobile-screens-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   PRIVACY POLICY DOCUMENT (PIXEL ART RETRO THEME)
+   -------------------------------------------------------------------------- */
+.policy-doc {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  font-family: var(--font-text);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+.policy-header {
+  border-bottom: 3px solid #000;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.policy-app-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.policy-app-icon {
+  width: 52px;
+  height: 52px;
+  border: 3px solid #000;
+  box-shadow: 
+    inset -2px -2px 0 0 var(--panel-bevel-dark),
+    inset 2px 2px 0 0 var(--panel-bevel-light),
+    0 4px 0 #000;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+.policy-title {
+  font-family: var(--font-pixel);
+  font-size: 1.3rem;
+  color: var(--color-gold);
+  text-shadow: 2px 2px 0 #000;
+  line-height: 1.4;
+}
+
+.policy-meta-strip {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-family: var(--font-pixel);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+}
+
+.policy-meta-strip strong {
+  color: var(--color-cyan);
+}
+
+.policy-intro {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.75;
+}
+
+.policy-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 2px solid #000;
+  box-shadow: 
+    inset -2px -2px 0 0 var(--panel-bevel-dark),
+    inset 2px 2px 0 0 var(--panel-bevel-light);
+}
+
+.policy-section-title {
+  font-family: var(--font-pixel);
+  font-size: 0.82rem;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.policy-subheading {
+  font-family: var(--font-pixel);
+  font-size: 0.68rem;
+  color: var(--color-gold);
+  margin-top: 6px;
+}
+
+.policy-list {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.policy-list li strong {
+  color: var(--color-cyan);
+}
+
+.policy-callout {
+  border-left: 4px solid var(--color-gold);
+  background: rgba(255, 230, 0, 0.08);
+  padding: 12px 16px;
+  font-size: 0.92rem;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.policy-link {
+  color: var(--color-cyan);
+  text-decoration: underline;
+}
+
+.policy-link:hover {
+  color: var(--color-gold);
+}
+
+@media (max-width: 680px) {
+  .policy-doc {
+    padding: 20px 14px;
+  }
+  .policy-title {
+    font-size: 1rem;
+  }
+}
+
 
 

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quest #02: Pixel Art Maker | Nay Myo Mhan - Developer Portfolio</title>
+  <meta name="description" content="Quest details and architectural breakdown for Pixel Art Maker - Mobile pixel art editor and animation suite engineered by Nay Myo Mhan.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230b0c14'/><rect x='2' y='4' width='12' height='8' fill='%232a2e47'/><rect x='4' y='7' width='3' height='2' fill='%2300f0ff'/><rect x='5' y='6' width='1' height='4' fill='%2300f0ff'/><rect x='10' y='6' width='2' height='2' fill='%23ff0055'/><rect x='11' y='8' width='2' height='2' fill='%23ffcc00'/></svg>">
+
+  <!-- Core Pixel Art Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css?v=2.4">
+</head>
+<body>
+
+  <!-- CRT Curved Screen & Scanline Effect Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <!-- Retro Cyber Glitch Overlay -->
+  <div class="crt-glitch-bar" aria-hidden="true"></div>
+
+  <!-- Main Container -->
+  <div class="container" style="padding-top: 24px; padding-bottom: 40px;">
+
+    <!-- Top Retro HUD Navigation -->
+    <header class="retro-hud" style="margin-bottom: 24px;">
+      <nav class="hud-bar" aria-label="Main Navigation">
+        <a href="../index.html" class="hud-logo">
+          <span>👾</span> <span class="glitch-text" data-text="NAY MYO MHAN">NAY MYO MHAN</span> <span class="blink">_</span>
+        </a>
+
+        <ul class="hud-nav">
+          <li><a href="../index.html" class="hud-link">[ 🏠 HOME ]</a></li>
+          <li><a href="../index.html#projects" class="hud-link active">[ ◀ BACK TO QUESTS ]</a></li>
+          <li><a href="../privacy/pixel-art-maker.html" class="hud-link">[ 🛡️ PRIVACY POLICY ]</a></li>
+          <li><a href="../index.html#contact" class="hud-link">[ 📜 CONTACT ]</a></li>
+        </ul>
+
+        <div class="hud-controls">
+          <button id="toggle-sound" class="hud-icon-btn" title="Toggle 8-bit Audio">
+            <span>🔊</span> SFX: ON
+          </button>
+          <button id="toggle-theme" class="hud-icon-btn" title="Switch Color Palette">
+            <span>🎨</span> ARCADE
+          </button>
+          <button id="toggle-crt" class="hud-icon-btn" title="Toggle CRT Scanlines">
+            <span>📺</span> CRT: ON
+          </button>
+          <button id="toggle-glitch" class="hud-icon-btn glitch-active-btn" title="Toggle Retro Cyber Glitch">
+            <span>⚡</span> GLITCH: ON
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Breadcrumbs Navigation -->
+    <div style="font-family: var(--font-pixel); font-size: 0.65rem; color: var(--color-cyan); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+      <a href="../index.html" style="color: var(--text-muted); text-decoration: none;">PORTFOLIO</a>
+      <span style="color: var(--color-primary);">&gt;&gt;</span>
+      <a href="../index.html#projects" style="color: var(--text-muted); text-decoration: none;">QUEST LOG</a>
+      <span style="color: var(--color-primary);">&gt;&gt;</span>
+      <span style="color: var(--color-gold);">QUEST #02: PIXEL ART MAKER</span>
+    </div>
+
+    <!-- Main Quest Detail Box (Pixel Art Style) -->
+    <article class="pixel-box quest-detail-card">
+      
+      <!-- Quest Header -->
+      <div class="quest-header-bar">
+        <div class="quest-id-group">
+          <span class="pixel-badge badge-cyan">QUEST #02</span>
+          <span class="pixel-badge badge-green">● PUBLISHED APP</span>
+          <span class="pixel-badge badge-gold">MOBILE CREATIVE STUDIO</span>
+        </div>
+        <h1 class="quest-title">
+          <span class="glitch-text" data-text="PIXEL ART MAKER: RETRO STUDIO">PIXEL ART MAKER: RETRO STUDIO</span>
+        </h1>
+        <p class="quest-subtitle">
+          A powerful mobile pixel art editor and frame-by-frame animation studio. Draw multi-layer sprites, animate with timeline &amp; onion skinning, convert photos into pixel art, and export game-ready GIFs &amp; sprite sheets with dual aesthetic themes.
+        </p>
+      </div>
+
+      <!-- Feature Banner Frame -->
+      <div class="quest-screenshot-box">
+        <div class="screenshot-bar">
+          <span class="bar-dot"></span>
+          <span>FEED: PIXEL ART MAKER // OFFICIAL BANNER &amp; ARTWORK</span>
+        </div>
+        <img src="../images/pixel-art-maker-banner.png" alt="Pixel Art Maker Feature Banner" class="quest-screenshot-img">
+      </div>
+
+      <!-- Real Mobile App Screenshots Showcase (3-Phone Grid) -->
+      <div>
+        <h2 class="quest-section-heading">
+          <span>📱</span> MOBILE APPLICATION INTERFACE
+        </h2>
+        <div class="mobile-screens-grid">
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">01 // SPRITE CANVAS &amp; PHOTO IMPORT</div>
+            <img src="../images/pixel-art-maker-screen1.png" alt="Creative Studio - Blank Canvas and Photo to Pixel Art" class="mobile-screen-img">
+          </div>
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">02 // FRAME ANIMATION &amp; TIMELINE</div>
+            <img src="../images/pixel-art-maker-screen2.png" alt="Smooth Retro Frame Animation and Onion Skinning" class="mobile-screen-img">
+          </div>
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">03 // DUAL THEMES (ARCADE / MODERN)</div>
+            <img src="../images/pixel-art-maker-screen3.png" alt="Dual Themes - Retro 8-Bit Arcade and Clean Modern" class="mobile-screen-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Concise 2-Column Quest Content Grid -->
+      <div class="quest-content-grid" style="margin-top: 8px;">
+        
+        <!-- Column 1: Brief & Engineering Role -->
+        <div class="quest-col">
+          <h2 class="quest-section-heading">
+            <span>📜</span> QUEST BRIEF &amp; DEV ROLE
+          </h2>
+          <div class="quest-text-block">
+            <p>
+              <strong>Mission:</strong> Build a smooth, frictionless mobile pixel art creation tool for game developers, artists, and retro fans. Remove desktop software complexity while preserving professional multi-layer painting and timeline animation capabilities.
+            </p>
+            <p>
+              <strong>Engineering Role:</strong> Creator &amp; Lead Mobile Developer (A Dev Dude / Nay Myo Mhan). Engineered the high-performance raster drawing engine, multi-frame timeline with real-time onion skinning, color quantization algorithms for photo conversion, palette management, and Google AdMob monetization.
+            </p>
+          </div>
+
+          <div class="quest-tech-section">
+            <span class="quest-tech-label">[ EQUIPPED TECH STACK ]</span>
+            <div class="inventory-items" style="margin-top: 6px;">
+              <span class="item-badge"><span>📱</span> Android SDK</span>
+              <span class="item-badge"><span>🎨</span> Canvas Engine</span>
+              <span class="item-badge"><span>🎞️</span> Frame Animation</span>
+              <span class="item-badge"><span>🖼️</span> Color Quantization</span>
+              <span class="item-badge"><span>💾</span> GIF &amp; Sprite Sheets</span>
+              <span class="item-badge"><span>📢</span> Google AdMob</span>
+              <span class="item-badge"><span>🔒</span> Local Storage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Core Modules & Features -->
+        <div class="quest-col">
+          <h2 class="quest-section-heading">
+            <span>⚡</span> CORE MODULES
+          </h2>
+          <ul class="quest-feature-list">
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🎨</span>
+              <div>
+                <strong>16-Layer Canvas Studio:</strong> Up to 16 independent layers with opacity blending, customizable canvas sizes (16x16, 24x24, 32x32, 48x48, 64x64+), and curated retro palettes.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🎞️</span>
+              <div>
+                <strong>Frame-by-Frame Animation:</strong> Dedicated multi-frame timeline with onion skinning, frame duplication, and real-time playback control for smooth game sprites.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🖼️</span>
+              <div>
+                <strong>Photo to Pixel Art:</strong> High-speed color quantization algorithm that transforms camera photos and gallery pictures into stylized pixel art sprites.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🕹️</span>
+              <div>
+                <strong>Dual Aesthetic Themes:</strong> Switch instantly between a nostalgic 8-bit retro arcade aesthetic (stepped borders, corner studs) and a clean modern minimal design.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">💾</span>
+              <div>
+                <strong>HD GIF &amp; Sprite Sheets:</strong> Seamlessly export work as animated GIFs, sprite sheets for Unity and Godot, high-res PNGs, and project files.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🔒</span>
+              <div>
+                <strong>100% Private Local Storage:</strong> Zero cloud tracking; all artwork, project drafts, and custom palettes stay strictly on the user's device.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Action Footer Links -->
+      <div class="quest-footer-actions">
+        <a href="../privacy/pixel-art-maker.html" class="pixel-btn pixel-btn-primary">
+          <span>🛡️</span> VIEW PRIVACY POLICY
+        </a>
+        <a href="../index.html#projects" class="pixel-btn">
+          <span>◀</span> BACK TO QUEST LOG
+        </a>
+        <a href="../index.html#contact" class="pixel-btn pixel-btn-secondary">
+          <span>📬</span> CONTACT DEVELOPER
+        </a>
+      </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="retro-footer" style="margin-top: 32px;">
+      <div class="pixel-box footer-box">
+        <div class="footer-arcade-text">
+          ★ PRESS START TO CONTINUE ★
+        </div>
+        <p class="footer-copy">
+          &copy; 2026 Nay Myo Mhan &bull; Pixel Art Portfolio &bull; All Rights Reserved
+        </p>
+        <a href="../index.html" class="pixel-btn pixel-btn-sm" style="margin-top: 6px;">
+          <span>🏠</span> RETURN TO MAIN HUB
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="../js/main.js?v=2.4"></script>
+</body>
+</html>
