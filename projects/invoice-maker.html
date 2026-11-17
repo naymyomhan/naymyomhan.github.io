@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quest #03: Easy Invoice Maker &amp; POS | Nay Myo Mhan - Developer Portfolio</title>
+  <meta name="description" content="Quest details for Easy Invoice Maker & POS - an offline point-of-sale, invoice maker and receipt printer for small shops, built with Flutter by Nay Myo Mhan.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230b0c14'/><rect x='2' y='4' width='12' height='8' fill='%232a2e47'/><rect x='4' y='7' width='3' height='2' fill='%2300f0ff'/><rect x='5' y='6' width='1' height='4' fill='%2300f0ff'/><rect x='10' y='6' width='2' height='2' fill='%23ff0055'/><rect x='11' y='8' width='2' height='2' fill='%23ffcc00'/></svg>">
+
+  <!-- Core Pixel Art Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css?v=2.4">
+</head>
+<body>
+
+  <!-- CRT Curved Screen & Scanline Effect Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <!-- Retro Cyber Glitch Overlay -->
+  <div class="crt-glitch-bar" aria-hidden="true"></div>
+
+  <!-- Main Container -->
+  <div class="container" style="padding-top: 24px; padding-bottom: 40px;">
+
+    <!-- Top Retro HUD Navigation -->
+    <header class="retro-hud" style="margin-bottom: 24px;">
+      <nav class="hud-bar" aria-label="Main Navigation">
+        <a href="../index.html" class="hud-logo">
+          <span>👾</span> <span class="glitch-text" data-text="NAY MYO MHAN">NAY MYO MHAN</span> <span class="blink">_</span>
+        </a>
+
+        <ul class="hud-nav">
+          <li><a href="../index.html" class="hud-link">[ 🏠 HOME ]</a></li>
+          <li><a href="../index.html#projects" class="hud-link active">[ ◀ BACK TO QUESTS ]</a></li>
+          <li><a href="../privacy/invoice-maker.html" class="hud-link">[ 🛡️ PRIVACY POLICY ]</a></li>
+          <li><a href="../index.html#contact" class="hud-link">[ 📜 CONTACT ]</a></li>
+        </ul>
+
+        <div class="hud-controls">
+          <button id="toggle-sound" class="hud-icon-btn" title="Toggle 8-bit Audio">
+            <span>🔊</span> SFX: ON
+          </button>
+          <button id="toggle-theme" class="hud-icon-btn" title="Switch Color Palette">
+            <span>🎨</span> ARCADE
+          </button>
+          <button id="toggle-crt" class="hud-icon-btn" title="Toggle CRT Scanlines">
+            <span>📺</span> CRT: ON
+          </button>
+          <button id="toggle-glitch" class="hud-icon-btn glitch-active-btn" title="Toggle Retro Cyber Glitch">
+            <span>⚡</span> GLITCH: ON
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Breadcrumbs Navigation -->
+    <div style="font-family: var(--font-pixel); font-size: 0.65rem; color: var(--color-cyan); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+      <a href="../index.html" style="color: var(--text-muted); text-decoration: none;">PORTFOLIO</a>
+      <span style="color: var(--color-primary);">&gt;&gt;</span>
+      <a href="../index.html#projects" style="color: var(--text-muted); text-decoration: none;">QUEST LOG</a>
+      <span style="color: var(--color-primary);">&gt;&gt;</span>
+      <span style="color: var(--color-gold);">QUEST #04: EASY INVOICE MAKER &amp; POS</span>
+    </div>
+
+    <!-- Main Quest Detail Box (Pixel Art Style) -->
+    <article class="pixel-box quest-detail-card">
+
+      <!-- Quest Header -->
+      <div class="quest-header-bar">
+        <div class="quest-id-group">
+          <span class="pixel-badge badge-cyan">QUEST #04</span>
+          <span class="pixel-badge badge-green">● ANDROID APP</span>
+          <span class="pixel-badge badge-gold">MOBILE POS &amp; INVOICING</span>
+        </div>
+        <h1 class="quest-title">
+          <span class="glitch-text" data-text="EASY INVOICE MAKER &amp; POS">EASY INVOICE MAKER &amp; POS</span>
+        </h1>
+        <p class="quest-subtitle">
+          A 100% offline point-of-sale and invoice maker for small shops. Ring up sales in seconds, print Bluetooth thermal receipts, design branded invoices with a movable PAID stamp, track customer debts, and close the day with one-tap reports &mdash; in English, Myanmar and Thai.
+        </p>
+      </div>
+
+      <!-- Feature Banner Frame -->
+      <div class="quest-screenshot-box">
+        <div class="screenshot-bar">
+          <span class="bar-dot"></span>
+          <span>FEED: EASY INVOICE MAKER &amp; POS // OFFICIAL FEATURE GRAPHIC</span>
+        </div>
+        <img src="../images/invoice-maker-banner.png" alt="Easy Invoice Maker &amp; POS Feature Banner" class="quest-screenshot-img">
+      </div>
+
+      <!-- Real Mobile App Screenshots Showcase (3-Phone Grid) -->
+      <div>
+        <h2 class="quest-section-heading">
+          <span>📱</span> MOBILE APPLICATION INTERFACE
+        </h2>
+        <div class="mobile-screens-grid">
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">01 // POS CASHIER &amp; BARCODE</div>
+            <img src="../images/invoice-maker-screen1.png" alt="POS cashier with product grid, stock levels and live cart" class="mobile-screen-img">
+          </div>
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">02 // BRANDED INVOICE &amp; PAID STAMP</div>
+            <img src="../images/invoice-maker-screen2.png" alt="Completed sale with a branded invoice and PAID stamp" class="mobile-screen-img">
+          </div>
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">03 // DAILY OVERVIEW &amp; ALERTS</div>
+            <img src="../images/invoice-maker-screen3.png" alt="Today overview with sales, money owed and low-stock alerts" class="mobile-screen-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Concise 2-Column Quest Content Grid -->
+      <div class="quest-content-grid" style="margin-top: 8px;">
+
+        <!-- Column 1: Brief & Engineering Role -->
+        <div class="quest-col">
+          <h2 class="quest-section-heading">
+            <span>📜</span> QUEST BRIEF &amp; DEV ROLE
+          </h2>
+          <div class="quest-text-block">
+            <p>
+              <strong>Mission:</strong> Give small shops, cafes and market stalls a real POS on the phone or tablet they already own &mdash; no account, no server, no monthly fee, and no internet needed at the counter.
+            </p>
+            <p>
+              <strong>Engineering Role:</strong> Creator &amp; Lead Mobile Developer (A Dev Dude / Nay Myo Mhan). Built the cashier and checkout flow, on-device SQLite storage with backup &amp; restore, pixel-identical invoice rendering at a fixed page width, ESC/POS raster printing for Bluetooth thermal printers, a tablet split-screen register, three-language localization, and Google AdMob monetization.
+            </p>
+          </div>
+
+          <div class="quest-tech-section">
+            <span class="quest-tech-label">[ EQUIPPED TECH STACK ]</span>
+            <div class="inventory-items" style="margin-top: 6px;">
+              <span class="item-badge"><span>💙</span> Flutter &amp; Dart</span>
+              <span class="item-badge"><span>🧠</span> GetX</span>
+              <span class="item-badge"><span>🗄️</span> SQLite</span>
+              <span class="item-badge"><span>🖨️</span> ESC/POS Bluetooth</span>
+              <span class="item-badge"><span>📄</span> PDF Printing</span>
+              <span class="item-badge"><span>📷</span> Barcode Scanner</span>
+              <span class="item-badge"><span>📢</span> Google AdMob</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Core Modules & Features -->
+        <div class="quest-col">
+          <h2 class="quest-section-heading">
+            <span>⚡</span> CORE MODULES
+          </h2>
+          <ul class="quest-feature-list">
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🛒</span>
+              <div>
+                <strong>Fast POS Cashier:</strong> Tap-to-add product grid, camera barcode scanning, live stock counts, and checkout as paid, credit or partial payment.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🧾</span>
+              <div>
+                <strong>Invoice Designer:</strong> Five page layouts plus an 80mm receipt roll, with your logo, shop details, colours, background, renamable labels and a draggable PAID stamp.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🖨️</span>
+              <div>
+                <strong>Print, Share &amp; Save:</strong> A5 printing through the system dialog, ESC/POS receipts to Bluetooth thermal printers, and invoice images shared to any chat app or saved to the gallery.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">📦</span>
+              <div>
+                <strong>Items, Stock &amp; Customers:</strong> Product photos and barcodes, stock-in history, low-stock alerts, a customer directory, and CSV export of items and sales.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">💰</span>
+              <div>
+                <strong>Credit Book &amp; Daily Closing:</strong> Money to receive and to pay, expenses, 7-day insights, monthly profit, and a one-tap end-of-day report.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🔒</span>
+              <div>
+                <strong>100% On-Device Data:</strong> Everything stays in a local database; one-file JSON backup &amp; restore moves a whole shop to a new phone.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Action Footer Links -->
+      <div class="quest-footer-actions">
+        <a href="../privacy/invoice-maker.html" class="pixel-btn pixel-btn-primary">
+          <span>🛡️</span> VIEW PRIVACY POLICY
+        </a>
+        <a href="../index.html#projects" class="pixel-btn">
+          <span>◀</span> BACK TO QUEST LOG
+        </a>
+        <a href="../index.html#contact" class="pixel-btn pixel-btn-secondary">
+          <span>📬</span> CONTACT DEVELOPER
+        </a>
+      </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="retro-footer" style="margin-top: 32px;">
+      <div class="pixel-box footer-box">
+        <div class="footer-arcade-text">
+          ★ PRESS START TO CONTINUE ★
+        </div>
+        <p class="footer-copy">
+          &copy; 2026 Nay Myo Mhan &bull; Pixel Art Portfolio &bull; All Rights Reserved
+        </p>
+        <a href="../index.html" class="pixel-btn pixel-btn-sm" style="margin-top: 6px;">
+          <span>🏠</span> RETURN TO MAIN HUB
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="../js/main.js?v=2.4"></script>
+</body>
+</html>

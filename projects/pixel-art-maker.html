@@ -11,6 +11,18 @@
 
   <!-- Core Pixel Art Stylesheet -->
   <link rel="stylesheet" href="../css/style.css?v=2.4">
+  <style>
+    /* Tablet screenshots (16:9): two per row, one per row on small screens. */
+    .tablet-screens-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 14px;
+    }
+    @media (max-width: 720px) {
+      .tablet-screens-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -71,12 +83,13 @@
           <span class="pixel-badge badge-cyan">QUEST #02</span>
           <span class="pixel-badge badge-green">● PUBLISHED APP</span>
           <span class="pixel-badge badge-gold">MOBILE CREATIVE STUDIO</span>
+          <span class="pixel-badge badge-red">v1.1 &bull; NEW TABLET LAYOUT</span>
         </div>
         <h1 class="quest-title">
           <span class="glitch-text" data-text="PIXEL ART MAKER: RETRO STUDIO">PIXEL ART MAKER: RETRO STUDIO</span>
         </h1>
         <p class="quest-subtitle">
-          A powerful mobile pixel art editor and frame-by-frame animation studio. Draw multi-layer sprites, animate with timeline &amp; onion skinning, convert photos into pixel art, and export game-ready GIFs &amp; sprite sheets with dual aesthetic themes.
+          A powerful pixel art editor and frame-by-frame animation studio for phones and tablets. Draw multi-layer sprites, animate with timeline &amp; onion skinning, convert photos into pixel art, and export game-ready GIFs &amp; sprite sheets &mdash; now with a dedicated pro tablet layout.
         </p>
       </div>
 
@@ -86,7 +99,7 @@
           <span class="bar-dot"></span>
           <span>FEED: PIXEL ART MAKER // OFFICIAL BANNER &amp; ARTWORK</span>
         </div>
-        <img src="../images/pixel-art-maker-banner.png" alt="Pixel Art Maker Feature Banner" class="quest-screenshot-img">
+        <img src="../images/pixel-art-maker-banner.png?v=1.1.1" alt="Pixel Art Maker Feature Banner - Phone and Tablet" class="quest-screenshot-img">
       </div>
 
       <!-- Real Mobile App Screenshots Showcase (3-Phone Grid) -->
@@ -97,15 +110,32 @@
         <div class="mobile-screens-grid">
           <div class="mobile-screen-frame">
             <div class="mobile-screen-caption">01 // SPRITE CANVAS &amp; PHOTO IMPORT</div>
-            <img src="../images/pixel-art-maker-screen1.png" alt="Creative Studio - Blank Canvas and Photo to Pixel Art" class="mobile-screen-img">
+            <img src="../images/pixel-art-maker-screen1.png?v=1.1.1" alt="Create Sprites - Blank Canvas and Photo to Pixel Art" class="mobile-screen-img">
           </div>
           <div class="mobile-screen-frame">
             <div class="mobile-screen-caption">02 // FRAME ANIMATION &amp; TIMELINE</div>
-            <img src="../images/pixel-art-maker-screen2.png" alt="Smooth Retro Frame Animation and Onion Skinning" class="mobile-screen-img">
+            <img src="../images/pixel-art-maker-screen2.png?v=1.1.1" alt="Frame-by-Frame Animation with Timeline and Onion Skinning" class="mobile-screen-img">
           </div>
           <div class="mobile-screen-frame">
-            <div class="mobile-screen-caption">03 // DUAL THEMES (ARCADE / MODERN)</div>
-            <img src="../images/pixel-art-maker-screen3.png" alt="Dual Themes - Retro 8-Bit Arcade and Clean Modern" class="mobile-screen-img">
+            <div class="mobile-screen-caption">03 // SELECT, TRANSFORM &amp; RECOLOR</div>
+            <img src="../images/pixel-art-maker-screen3.png?v=1.1.1" alt="Select, Transform and Recolor with Live Hue, Saturation and Lightness" class="mobile-screen-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Tablet Layout Showcase (new in v1.1) -->
+      <div>
+        <h2 class="quest-section-heading">
+          <span>📲</span> TABLET STUDIO (NEW IN v1.1)
+        </h2>
+        <div class="tablet-screens-grid">
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">01 // TOOL RAIL, DOCKED PALETTE &amp; LAYERS</div>
+            <img src="../images/pixel-art-maker-tablet1.png?v=1.1.1" alt="Pro Tablet Studio - Tool Rail, Docked Palette and Layers, Timeline" class="mobile-screen-img">
+          </div>
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">02 // BIG CANVAS FOR DETAILED ART</div>
+            <img src="../images/pixel-art-maker-tablet2.png?v=1.1.1" alt="Big Canvas for Detailed Pixel Art on Tablets" class="mobile-screen-img">
           </div>
         </div>
       </div>
@@ -133,6 +163,7 @@
               <span class="item-badge"><span>📱</span> Android SDK</span>
               <span class="item-badge"><span>🎨</span> Canvas Engine</span>
               <span class="item-badge"><span>🎞️</span> Frame Animation</span>
+              <span class="item-badge"><span>📲</span> Adaptive Tablet UI</span>
               <span class="item-badge"><span>🖼️</span> Color Quantization</span>
               <span class="item-badge"><span>💾</span> GIF &amp; Sprite Sheets</span>
               <span class="item-badge"><span>📢</span> Google AdMob</span>
@@ -150,7 +181,7 @@
             <li class="quest-feature-item">
               <span class="feature-bullet">🎨</span>
               <div>
-                <strong>16-Layer Canvas Studio:</strong> Up to 16 independent layers with opacity blending, customizable canvas sizes (16x16, 24x24, 32x32, 48x48, 64x64+), and curated retro palettes.
+                <strong>16-Layer Canvas Studio:</strong> Up to 16 independent layers with opacity blending, canvas presets from 16x16 up to 256x256 plus custom sizes, and curated retro palettes.
               </div>
             </li>
             <li class="quest-feature-item">
@@ -166,9 +197,9 @@
               </div>
             </li>
             <li class="quest-feature-item">
-              <span class="feature-bullet">🕹️</span>
+              <span class="feature-bullet">📲</span>
               <div>
-                <strong>Dual Aesthetic Themes:</strong> Switch instantly between a nostalgic 8-bit retro arcade aesthetic (stepped borders, corner studs) and a clean modern minimal design.
+                <strong>Phone &amp; Tablet Layouts:</strong> A compact one-hand layout on phones and a pro tablet studio with a tool rail, docked palette &amp; layers and a bigger canvas, in portrait or landscape.
               </div>
             </li>
             <li class="quest-feature-item">

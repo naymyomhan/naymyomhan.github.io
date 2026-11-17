@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quest #03: 1000 Dreams - Myanmar Dream Book | Nay Myo Mhan - Developer Portfolio</title>
+  <meta name="description" content="1000 Dreams (အိပ်မက် ဟောကိန်း) - an offline Myanmar dream book app with 1000 illustrated dreams, 100 dreams, 100 lucky animals and a dream dictionary. Built by Nay Myo Mhan.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230b0c14'/><rect x='2' y='4' width='12' height='8' fill='%232a2e47'/><rect x='4' y='7' width='3' height='2' fill='%2300f0ff'/><rect x='5' y='6' width='1' height='4' fill='%2300f0ff'/><rect x='10' y='6' width='2' height='2' fill='%23ff0055'/><rect x='11' y='8' width='2' height='2' fill='%23ffcc00'/></svg>">
+
+  <!-- Core Pixel Art Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css?v=2.4">
+</head>
+<body>
+
+  <!-- CRT Curved Screen & Scanline Effect Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <!-- Retro Cyber Glitch Overlay -->
+  <div class="crt-glitch-bar" aria-hidden="true"></div>
+
+  <!-- Main Container -->
+  <div class="container" style="padding-top: 24px; padding-bottom: 40px;">
+
+    <!-- Top Retro HUD Navigation -->
+    <header class="retro-hud" style="margin-bottom: 24px;">
+      <nav class="hud-bar" aria-label="Main Navigation">
+        <a href="../index.html" class="hud-logo">
+          <span>👾</span> <span class="glitch-text" data-text="NAY MYO MHAN">NAY MYO MHAN</span> <span class="blink">_</span>
+        </a>
+
+        <ul class="hud-nav">
+          <li><a href="../index.html" class="hud-link">[ 🏠 HOME ]</a></li>
+          <li><a href="../index.html#projects" class="hud-link active">[ ◀ BACK TO QUESTS ]</a></li>
+          <li><a href="../privacy/1000-dreams.html" class="hud-link">[ 🛡️ PRIVACY POLICY ]</a></li>
+          <li><a href="../index.html#contact" class="hud-link">[ 📜 CONTACT ]</a></li>
+        </ul>
+
+        <div class="hud-controls">
+          <button id="toggle-sound" class="hud-icon-btn" title="Toggle 8-bit Audio">
+            <span>🔊</span> SFX: ON
+          </button>
+          <button id="toggle-theme" class="hud-icon-btn" title="Switch Color Palette">
+            <span>🎨</span> ARCADE
+          </button>
+          <button id="toggle-crt" class="hud-icon-btn" title="Toggle CRT Scanlines">
+            <span>📺</span> CRT: ON
+          </button>
+          <button id="toggle-glitch" class="hud-icon-btn glitch-active-btn" title="Toggle Retro Cyber Glitch">
+            <span>⚡</span> GLITCH: ON
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Breadcrumbs Navigation -->
+    <div style="font-family: var(--font-pixel); font-size: 0.65rem; color: var(--color-cyan); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+      <a href="../index.html" style="color: var(--text-muted); text-decoration: none;">PORTFOLIO</a>
+      <span style="color: var(--color-primary);">&gt;&gt;</span>
+      <a href="../index.html#projects" style="color: var(--text-muted); text-decoration: none;">QUEST LOG</a>
+      <span style="color: var(--color-primary);">&gt;&gt;</span>
+      <span style="color: var(--color-gold);">QUEST #03: 1000 DREAMS</span>
+    </div>
+
+    <!-- Main Quest Detail Box (Pixel Art Style) -->
+    <article class="pixel-box quest-detail-card">
+
+      <!-- Quest Header -->
+      <div class="quest-header-bar">
+        <div class="quest-id-group">
+          <span class="pixel-badge badge-cyan">QUEST #03</span>
+          <span class="pixel-badge badge-green">● NEW APP</span>
+          <span class="pixel-badge badge-gold">MOBILE DREAM BOOK</span>
+        </div>
+        <h1 class="quest-title">
+          <span class="glitch-text" data-text="1000 DREAMS: MYANMAR DREAM BOOK">1000 DREAMS: MYANMAR DREAM BOOK</span>
+        </h1>
+        <p class="quest-subtitle">
+          <strong>အိပ်မက် ဟောကိန်း</strong> &mdash; a fast, fully offline Myanmar dream book for Android. Look up the 1000 illustrated dreams with their lucky numbers, the 100 dreams and 100 lucky animals, and a dream dictionary of 2,600+ readings, with one search that understands Myanmar words, English names and Myanmar digits.
+        </p>
+      </div>
+
+      <!-- Feature Banner Frame -->
+      <div class="quest-screenshot-box">
+        <div class="screenshot-bar">
+          <span class="bar-dot"></span>
+          <span>FEED: 1000 DREAMS // OFFICIAL BANNER &amp; ARTWORK</span>
+        </div>
+        <img src="../images/1000-dreams-banner.png" alt="1000 Dreams - Myanmar Dream Book feature banner" class="quest-screenshot-img">
+      </div>
+
+      <!-- Mobile App Screenshots Showcase -->
+      <div>
+        <h2 class="quest-section-heading">
+          <span>📱</span> MOBILE APPLICATION INTERFACE
+        </h2>
+        <div class="mobile-screens-grid">
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">01 // HOME &amp; DREAM OF THE DAY</div>
+            <img src="../images/1000-dreams-screen1.png" alt="Home screen with the dream of the day and the four books" class="mobile-screen-img">
+          </div>
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">02 // 1000 ILLUSTRATED DREAMS</div>
+            <img src="../images/1000-dreams-screen2.png" alt="Grid of the 1000 dreams with pictures and numbers" class="mobile-screen-img">
+          </div>
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">03 // ROUND &amp; UP-DOWN NUMBERS</div>
+            <img src="../images/1000-dreams-screen3.png" alt="Dream detail with its round and up-down numbers" class="mobile-screen-img">
+          </div>
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">04 // 100 LUCKY ANIMALS</div>
+            <img src="../images/1000-dreams-screen4.png" alt="The 100 lucky animals filtered by first digit" class="mobile-screen-img">
+          </div>
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">05 // DREAM DICTIONARY SEARCH</div>
+            <img src="../images/1000-dreams-screen5.png" alt="Dream dictionary search with highlighted matches" class="mobile-screen-img">
+          </div>
+          <div class="mobile-screen-frame">
+            <div class="mobile-screen-caption">06 // LIGHT &amp; DARK THEMES</div>
+            <img src="../images/1000-dreams-screen6.png" alt="Home screen in dark mode" class="mobile-screen-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Concise 2-Column Quest Content Grid -->
+      <div class="quest-content-grid" style="margin-top: 8px;">
+
+        <!-- Column 1: Brief & Engineering Role -->
+        <div class="quest-col">
+          <h2 class="quest-section-heading">
+            <span>📜</span> QUEST BRIEF &amp; DEV ROLE
+          </h2>
+          <div class="quest-text-block">
+            <p>
+              <strong>Mission:</strong> Bring the classic Myanmar dream books to the phone in one clean, compact app. Find what a dream means and its lucky numbers in seconds, with no account, no sign-in and no internet needed for the content.
+            </p>
+            <p>
+              <strong>Engineering Role:</strong> Creator &amp; Lead Mobile Developer (A Dev Dude / Nay Myo Mhan). Built the Flutter app, bundled and parsed the dream data on a background isolate, designed the compact monochrome light &amp; dark interface, wrote the search with Myanmar-digit support, and integrated Google AdMob with frequency-capped placements and Google's consent (UMP) flow.
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              <strong>Note:</strong> Dream readings and numbers are traditional folklore, provided for cultural reference and entertainment only.
+            </p>
+          </div>
+
+          <div class="quest-tech-section">
+            <span class="quest-tech-label">[ EQUIPPED TECH STACK ]</span>
+            <div class="inventory-items" style="margin-top: 6px;">
+              <span class="item-badge"><span>💙</span> Flutter</span>
+              <span class="item-badge"><span>🎯</span> Dart</span>
+              <span class="item-badge"><span>📱</span> Android</span>
+              <span class="item-badge"><span>📦</span> Offline Data</span>
+              <span class="item-badge"><span>🌗</span> Light &amp; Dark Themes</span>
+              <span class="item-badge"><span>📢</span> Google AdMob</span>
+              <span class="item-badge"><span>🔒</span> UMP Consent</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Core Modules & Features -->
+        <div class="quest-col">
+          <h2 class="quest-section-heading">
+            <span>⚡</span> CORE MODULES
+          </h2>
+          <ul class="quest-feature-list">
+            <li class="quest-feature-item">
+              <span class="feature-bullet">📖</span>
+              <div>
+                <strong>1000 Illustrated Dreams:</strong> Every dream with its drawing, three-digit number, Myanmar and English name. Narrow the book down by first digit (0&ndash;9) in one tap.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🔁</span>
+              <div>
+                <strong>Round &amp; Up-Down Numbers:</strong> Each dream links to the dreams for every reordering of its digits and for the numbers directly above and below it.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🐉</span>
+              <div>
+                <strong>100 Dreams &amp; 100 Lucky Animals:</strong> Picture cards with two-digit numbers and Myanmar, English and Thai names, plus a zoomable full-screen picture view.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🔤</span>
+              <div>
+                <strong>Dream Dictionary:</strong> 2,600+ readings grouped by Myanmar letter, with full-text search and highlighted matches.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🔍</span>
+              <div>
+                <strong>Search Everything:</strong> One search box across all four books. Type a number in Myanmar digits (၅၄) or Latin digits (54), or any word.
+              </div>
+            </li>
+            <li class="quest-feature-item">
+              <span class="feature-bullet">🔒</span>
+              <div>
+                <strong>Private &amp; Offline:</strong> All content ships inside the app. No account, no sign-in, and no personal data collected by the app.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Action Footer Links -->
+      <div class="quest-footer-actions">
+        <a href="../privacy/1000-dreams.html" class="pixel-btn pixel-btn-primary">
+          <span>🛡️</span> VIEW PRIVACY POLICY
+        </a>
+        <a href="../index.html#projects" class="pixel-btn">
+          <span>◀</span> BACK TO QUEST LOG
+        </a>
+        <a href="../index.html#contact" class="pixel-btn pixel-btn-secondary">
+          <span>📬</span> CONTACT DEVELOPER
+        </a>
+      </div>
+
+    </article>
+
+    <!-- Footer -->
+    <footer class="retro-footer" style="margin-top: 32px;">
+      <div class="pixel-box footer-box">
+        <div class="footer-arcade-text">
+          ★ PRESS START TO CONTINUE ★
+        </div>
+        <p class="footer-copy">
+          &copy; 2026 Nay Myo Mhan &bull; Pixel Art Portfolio &bull; All Rights Reserved
+        </p>
+        <a href="../index.html" class="pixel-btn pixel-btn-sm" style="margin-top: 6px;">
+          <span>🏠</span> RETURN TO MAIN HUB
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="../js/main.js?v=2.4"></script>
+</body>
+</html>
