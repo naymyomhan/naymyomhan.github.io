@@ -2,446 +2,378 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nay Myo Mhan | Pixel Art Developer Portfolio</title>
-  <meta name="description" content="Personal retro 8-bit pixel art portfolio for Nay Myo Mhan - Software Engineer & Full-Stack Developer.">
-  
-  <!-- Favicon (Pixel Gamepad SVG) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230b0c14'/><rect x='2' y='4' width='12' height='8' fill='%232a2e47'/><rect x='4' y='7' width='3' height='2' fill='%2300f0ff'/><rect x='5' y='6' width='1' height='4' fill='%2300f0ff'/><rect x='10' y='6' width='2' height='2' fill='%23ff0055'/><rect x='11' y='8' width='2' height='2' fill='%23ffcc00'/></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Dev Dude — Full-Stack, Mobile &amp; AI Engineer</title>
+  <meta name="description" content="A Dev Dude builds web platforms with Laravel and Next.js, AI-powered products on large language models, and offline-first Android apps with Flutter.">
+  <meta name="author" content="A Dev Dude">
+  <link rel="canonical" href="https://naymyomhan.github.io/">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c0e13" media="(prefers-color-scheme: dark)">
 
-  <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2.1">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="A Dev Dude">
+  <meta property="og:title" content="A Dev Dude — Full-Stack, Mobile &amp; AI Engineer">
+  <meta property="og:description" content="Web platforms with Laravel and Next.js, AI-powered products on large language models, and offline-first Android apps with Flutter.">
+  <meta property="og:url" content="https://naymyomhan.github.io/">
+  <meta property="og:image" content="https://naymyomhan.github.io/images/a-dev-dude.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" type="image/png" href="images/a-dev-dude-192.png">
+  <link rel="apple-touch-icon" href="images/a-dev-dude-192.png">
+  <link rel="stylesheet" href="css/style.css?v=3.2">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- CRT Curved Screen & Scanline Effect Overlay -->
-  <div class="crt-overlay" aria-hidden="true"></div>
-  <!-- Retro Cyber Glitch Overlay -->
-  <div class="crt-glitch-bar" aria-hidden="true"></div>
-
-  <!-- Main Container -->
-  <div class="container">
-
-    <!-- Top Retro HUD Navigation -->
-    <header class="retro-hud">
-      <nav class="hud-bar" aria-label="Main Navigation">
-        <a href="#hero" class="hud-logo">
-          <span>👾</span> <span class="glitch-text" data-text="NAY MYO MHAN">NAY MYO MHAN</span> <span class="blink">_</span>
-        </a>
-
-        <ul class="hud-nav">
-          <li><a href="#hero" class="hud-link active">[ 🏠 HOME ]</a></li>
-          <li><a href="#projects" class="hud-link">[ ⚔️ QUESTS ]</a></li>
-          <li><a href="#skills" class="hud-link">[ 🎒 GEAR ]</a></li>
-          <li><a href="#contact" class="hud-link">[ 📜 CONTACT ]</a></li>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="A Dev Dude — home">
+        <img class="brand-mark" src="images/a-dev-dude-96.jpg" alt="" width="32" height="32">
+        <span class="brand-text">A Dev Dude</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-
-        <div class="hud-controls">
-          <button id="toggle-bgm" class="hud-icon-btn playing" title="Toggle Lo-Fi Background Music">
-            <span class="bgm-icon">🎵</span> BGM: ON
-            <span class="bgm-bars" aria-hidden="true">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </span>
-          </button>
-          <button id="next-bgm" class="hud-icon-btn" title="Skip to Next Random Lo-Fi Song" aria-label="Next Random Lo-Fi Song">
-            <span>⏭️</span>
-          </button>
-          <button id="toggle-sound" class="hud-icon-btn" title="Toggle 8-bit Audio">
-            <span>🔊</span> SFX: ON
-          </button>
-          <button id="toggle-theme" class="hud-icon-btn" title="Switch Color Palette">
-            <span>🎨</span> ARCADE
-          </button>
-          <button id="toggle-crt" class="hud-icon-btn" title="Toggle CRT Scanlines">
-            <span>📺</span> CRT: ON
-          </button>
-          <button id="toggle-glitch" class="hud-icon-btn glitch-active-btn" title="Toggle Retro Cyber Glitch">
-            <span>⚡</span> GLITCH: ON
-          </button>
-        </div>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-      <div class="pixel-box hero-card">
-        
-        <!-- Left: Character Frame & Stats -->
-        <div class="character-box">
-          <div class="character-sprite-frame" title="Click character for +100 EXP!">
-            <!-- Pixel Art Profile Avatar -->
-            <img src="images/profile.png" alt="Nay Myo Mhan Pixel Avatar" class="pixel-character">
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge badge-success"><span class="dot" aria-hidden="true"></span>Open to new projects</span>
+          <h1>A Dev Dude</h1>
+          <p class="hero-role">Full-Stack, Mobile &amp; AI Engineer</p>
+          <p class="hero-lead">
+            I design, build and ship complete products: web platforms with Laravel and Next.js,
+            AI-powered tools built on large language models, and offline-first Android apps with Flutter.
+            I care about software that is fast, reliable and respectful of its users&rsquo; data.
+          </p>
+          <div class="btn-row">
+            <a href="#work" class="btn btn-primary">
+              View my work
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get in touch</a>
           </div>
+          <ul class="social" aria-label="Profiles">
+            <li>
+              <a href="https://github.com/naymyomhan" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/naymyomhan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/naymyomhan" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contact@naymyomhan.com" aria-label="Email" title="Email">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-          <!-- RPG Stats Bars -->
-          <div class="stat-bars">
-            <div class="stat-item">
-              <span class="stat-label hp">HP</span>
-              <div class="bar-container">
-                <div class="bar-fill hp" title="Health: 100%"></div>
+        <aside class="card hero-panel" aria-label="Recently shipped">
+          <p class="panel-title">Recently shipped</p>
+          <ul class="mini-list">
+            <li>
+              <a href="projects/invoice-maker.html">
+                <img src="images/invoice-maker-icon.png" alt="" width="44" height="44">
+                <span class="mini-text"><strong>Easy Invoice Maker &amp; POS</strong><small>Android &middot; Business</small></span>
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="projects/1000-dreams.html">
+                <img src="images/1000-dreams-icon.png" alt="" width="44" height="44">
+                <span class="mini-text"><strong>1000 Dreams</strong><small>Android &middot; Reference</small></span>
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="projects/pixel-art-maker.html">
+                <img src="images/pixel-art-maker-icon.png" alt="" width="44" height="44">
+                <span class="mini-text"><strong>Pixel Art Maker</strong><small>Android &middot; Creative tools</small></span>
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="projects/rivo-ai.html">
+                <span class="mini-tile" aria-hidden="true">R</span>
+                <span class="mini-text"><strong>Rivo AI</strong><small>Web &middot; AI SaaS</small></span>
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section section-alt" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Work</p>
+          <h2 id="work-title">Selected projects</h2>
+          <p>Products I&rsquo;ve designed, built and shipped &mdash; from a production AI platform to offline-first Android apps.</p>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="card project-card">
+            <a href="projects/invoice-maker.html" class="project-media" tabindex="-1" aria-hidden="true">
+              <img src="images/invoice-maker-banner.png" alt="" width="1024" height="500" loading="lazy" decoding="async">
+            </a>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge badge-accent">New</span>
+                <span class="meta-text">Android app &middot; Flutter</span>
+              </div>
+              <h3 class="project-title"><a href="projects/invoice-maker.html">Easy Invoice Maker &amp; POS</a></h3>
+              <p class="project-desc">
+                Offline point-of-sale and invoicing for small shops: a fast cashier with barcode scanning, branded invoices,
+                Bluetooth thermal receipts, stock alerts, a customer credit book and one-tap daily reports &mdash; in English, Myanmar and Thai.
+              </p>
+              <p class="stack">Flutter &middot; SQLite &middot; Bluetooth printing &middot; Offline-first</p>
+              <div class="project-links">
+                <a href="projects/invoice-maker.html" class="text-link">
+                  View project
+                  <svg class="svg-icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a href="privacy/invoice-maker.html" class="text-link subtle">Privacy policy</a>
               </div>
             </div>
-            <div class="stat-item">
-              <span class="stat-label mp">MP</span>
-              <div class="bar-container">
-                <div class="bar-fill mp" title="Mana / Caffeine: 85%"></div>
+          </article>
+
+          <article class="card project-card">
+            <a href="projects/1000-dreams.html" class="project-media" tabindex="-1" aria-hidden="true">
+              <img src="images/1000-dreams-banner.png" alt="" width="1024" height="500" loading="lazy" decoding="async">
+            </a>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge badge-accent">New</span>
+                <span class="meta-text">Android app &middot; Flutter</span>
+              </div>
+              <h3 class="project-title">
+                <a href="projects/1000-dreams.html">1000 Dreams</a>
+                <span class="alt-name"><span lang="my">အိပ်မက် ဟောကိန်း</span> &middot; Myanmar Dream Book</span>
+              </h3>
+              <p class="project-desc">
+                A fast, fully offline Myanmar dream book: 1000 illustrated dreams with lucky numbers, the 100 dreams and 100 lucky animals,
+                and a 2,600+ reading dream dictionary &mdash; with one search that understands Myanmar words and digits.
+              </p>
+              <p class="stack">Flutter &middot; Offline data &middot; Myanmar search</p>
+              <div class="project-links">
+                <a href="projects/1000-dreams.html" class="text-link">
+                  View project
+                  <svg class="svg-icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a href="privacy/1000-dreams.html" class="text-link subtle">Privacy policy</a>
               </div>
             </div>
-            <div class="stat-item">
-              <span class="stat-label xp">XP</span>
-              <div class="bar-container">
-                <div class="bar-fill xp" title="Experience Points: Level 99"></div>
+          </article>
+
+          <article class="card project-card">
+            <a href="projects/pixel-art-maker.html" class="project-media" tabindex="-1" aria-hidden="true">
+              <img src="images/pixel-art-maker-banner.png?v=1.1.1" alt="" width="1024" height="500" loading="lazy" decoding="async">
+            </a>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge badge-success"><span class="dot" aria-hidden="true"></span>Published</span>
+                <span class="meta-text">Android app &middot; Phones &amp; tablets</span>
+              </div>
+              <h3 class="project-title"><a href="projects/pixel-art-maker.html">Pixel Art Maker</a></h3>
+              <p class="project-desc">
+                Pixel art editor and animation studio for phones and tablets: 16-layer canvases, a frame-by-frame timeline with onion skinning,
+                photo-to-pixel-art conversion, and GIF &amp; sprite-sheet export. Version 1.1 adds a pro tablet layout.
+              </p>
+              <p class="stack">Android &middot; Canvas engine &middot; Frame animation &middot; Tablet UI</p>
+              <div class="project-links">
+                <a href="projects/pixel-art-maker.html" class="text-link">
+                  View project
+                  <svg class="svg-icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a href="privacy/pixel-art-maker.html" class="text-link subtle">Privacy policy</a>
               </div>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <!-- Right: Player Intro Content -->
-        <div class="hero-content">
-          <div class="hero-pretitle">
-            <span class="pixel-badge badge-green">● PLAYER 1 CONNECTED</span>
-            <span>PRESS START</span>
-          </div>
-
-          <h1 class="hero-name">
-            HI, I'M <span class="glitch-text" data-text="NAY MYO MHAN">NAY MYO MHAN</span>
-          </h1>
-
-          <div class="hero-role">
-            <span>⚔️</span> FULL-STACK DEVELOPER &amp; GAME CREATOR
-          </div>
-
-          <p class="hero-bio">
-            Full-stack engineer crafting high-performance web systems and interactive digital worlds with <strong>PHP (Laravel)</strong>, <strong>JavaScript (Next.js, React)</strong>, and <strong>C# (Unity)</strong>. Delivering robust backends, sleek UIs, and engaging gameplay.
-          </p>
-
-          <div class="hero-tags">
-            <span class="pixel-badge badge-green">🐘 PHP &bull; LARAVEL</span>
-            <span class="pixel-badge badge-cyan">▲ NEXT.JS &bull; JS</span>
-            <span class="pixel-badge badge-gold">🎮 C# &bull; UNITY</span>
-            <span class="pixel-badge">LEVEL 99 DEV</span>
-            <span class="pixel-badge badge-red">● OPEN FOR WORK</span>
-          </div>
-
-          <div class="hero-actions">
-            <a href="#projects" class="pixel-btn pixel-btn-primary">
-              <span>🏆</span> VIEW QUESTS
+          <article class="card project-card">
+            <a href="projects/rivo-ai.html" class="project-media" tabindex="-1" aria-hidden="true">
+              <img src="images/rivo-real.png" alt="" width="1280" height="800" loading="lazy" decoding="async">
             </a>
-            <a href="#skills" class="pixel-btn pixel-btn-secondary">
-              <span>🎒</span> SKILLS
-            </a>
-            <a href="#contact" class="pixel-btn">
-              <span>📬</span> CONTACT
-            </a>
-          </div>
-        </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge badge-success"><span class="dot" aria-hidden="true"></span>Live</span>
+                <span class="meta-text">Web app &middot; AI SaaS</span>
+              </div>
+              <h3 class="project-title"><a href="projects/rivo-ai.html">Rivo AI</a></h3>
+              <p class="project-desc">
+                Generative AI content studio for video creators: turns long videos into recaps, produces AI voiceovers with voice cloning,
+                and generates Myanmar &amp; English subtitles with Google Gemini.
+              </p>
+              <p class="stack">Next.js &middot; TypeScript &middot; Google Gemini &middot; Vercel</p>
+              <div class="project-links">
+                <a href="projects/rivo-ai.html" class="text-link">
+                  View project
+                  <svg class="svg-icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a href="https://rivoai.app/" target="_blank" rel="noopener noreferrer" class="text-link subtle">
+                  rivoai.app
+                  <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
 
-      </div>
-    </section>
-
-    <!-- Projects Section / Quest Log -->
-    <section id="projects" class="section-wrapper">
-      
-      <!-- Section Header -->
-      <div class="pixel-box section-head-box">
-        <!-- Bongo Cat Jamming on the Quest Log Header Border -->
-        <div class="bongo-cat-wrapper" title="Bongo Cat jamming to the Lo-Fi beats!">
-          <span class="bongo-music-note">♫♪</span>
-          <div class="bongo-cat-frame">
-            <img src="images/bongo-cat.gif" alt="Bongo Cat Jamming" class="bongo-cat-gif">
-          </div>
-        </div>
-
-        <div class="section-title-group">
-          <h2 class="section-title">
-            <span>🏆</span> <span class="glitch-text" data-text="QUEST LOG: PROJECTS">QUEST LOG: PROJECTS</span>
-          </h2>
-          <p class="section-subtitle">
-            Selected coding quests and applications. Easily customize placeholders with your own creations!
-          </p>
-        </div>
-
-        <!-- Filter Controls -->
-        <div class="filter-bar" role="group" aria-label="Project Category Filter">
-          <button class="filter-btn active" data-filter="all">[ ALL ]</button>
-          <button class="filter-btn" data-filter="web">[ WEB APPS ]</button>
-          <button class="filter-btn" data-filter="mobile">[ MOBILE APPS ]</button>
-          <button class="filter-btn" data-filter="tools">[ TOOLS &amp; AI ]</button>
-        </div>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="projects-grid">
-
-        <!-- Featured Project: Easy Invoice Maker & POS -->
-        <article class="project-card featured-quest-card" data-category="mobile tools">
-          <div class="project-preview">
-            <span class="preview-quest-num">QUEST #04</span>
-            <span class="pixel-badge badge-green preview-badge-status">● NEW APP</span>
-            <div class="project-real-img-frame">
-              <img src="images/invoice-maker-banner.png" alt="Easy Invoice Maker &amp; POS - Offline POS for small shops" class="project-card-real-img">
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="quest-tags-top">
-              <span class="pixel-badge badge-gold">★ FEATURED QUEST</span>
-              <span class="pixel-badge badge-cyan">MOBILE &bull; POS &amp; INVOICING</span>
-            </div>
-            <h3 class="project-title glitch-text" data-text="Easy Invoice Maker &amp; POS">
-              Easy Invoice Maker &amp; POS
-            </h3>
-            <p class="project-desc">
-              A 100% offline point-of-sale and invoice maker for small shops. Fast tap-to-add cashier with barcode scanning, branded invoices with a movable PAID stamp, Bluetooth thermal receipts, stock alerts, a customer credit book and one-tap daily closing reports &mdash; in English, Myanmar and Thai.
-            </p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">#FLUTTER</span>
-              <span class="tech-tag">#POS</span>
-              <span class="tech-tag">#INVOICING</span>
-              <span class="tech-tag">#THERMAL-PRINT</span>
-              <span class="tech-tag">#OFFLINE</span>
-              <span class="tech-tag">#ADMOB</span>
-            </div>
-            <div class="project-actions">
-              <a href="projects/invoice-maker.html" class="pixel-btn pixel-btn-primary">
-                <span>📜</span> QUEST DETAILS
-              </a>
-              <a href="privacy/invoice-maker.html" class="pixel-btn pixel-btn-secondary">
-                <span>🛡️</span> PRIVACY POLICY
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Featured Project: 1000 Dreams -->
-        <article class="project-card featured-quest-card" data-category="mobile">
-          <div class="project-preview">
-            <span class="preview-quest-num">QUEST #03</span>
-            <span class="pixel-badge badge-green preview-badge-status">● NEW APP</span>
-            <div class="project-real-img-frame">
-              <img src="images/1000-dreams-banner.png" alt="1000 Dreams (အိပ်မက် ဟောကိန်း) - Myanmar Dream Book" class="project-card-real-img">
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="quest-tags-top">
-              <span class="pixel-badge badge-gold">★ FEATURED QUEST</span>
-              <span class="pixel-badge badge-cyan">MOBILE &bull; DREAM BOOK</span>
-            </div>
-            <h3 class="project-title glitch-text" data-text="1000 Dreams - Myanmar Dream Book">
-              1000 Dreams - Myanmar Dream Book
-            </h3>
-            <p class="project-desc">
-              <strong>အိပ်မက် ဟောကိန်း</strong> &mdash; a fast, fully offline Myanmar dream book for Android. 1000 illustrated dreams with lucky numbers, the 100 dreams and 100 lucky animals, and a 2,600+ reading dream dictionary, with one search that understands Myanmar words and Myanmar digits, in a compact light &amp; dark design.
-            </p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">#FLUTTER</span>
-              <span class="tech-tag">#MOBILE-APP</span>
-              <span class="tech-tag">#OFFLINE</span>
-              <span class="tech-tag">#DARK-MODE</span>
-              <span class="tech-tag">#MYANMAR</span>
-              <span class="tech-tag">#ADMOB</span>
-            </div>
-            <div class="project-actions">
-              <a href="projects/1000-dreams.html" class="pixel-btn pixel-btn-primary">
-                <span>📜</span> QUEST DETAILS
-              </a>
-              <a href="privacy/1000-dreams.html" class="pixel-btn pixel-btn-secondary">
-                <span>🛡️</span> PRIVACY POLICY
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Featured Project: Pixel Art Maker -->
-        <article class="project-card featured-quest-card" data-category="mobile tools">
-          <div class="project-preview">
-            <span class="preview-quest-num">QUEST #02</span>
-            <span class="pixel-badge badge-green preview-badge-status">● PUBLISHED APP</span>
-            <div class="project-real-img-frame">
-              <img src="images/pixel-art-maker-banner.png?v=1.1.1" alt="Pixel Art Maker - Draw, Animate &amp; Create Pixel Art on Phone and Tablet" class="project-card-real-img">
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="quest-tags-top">
-              <span class="pixel-badge badge-gold">★ FEATURED QUEST</span>
-              <span class="pixel-badge badge-cyan">MOBILE &bull; RETRO STUDIO</span>
-            </div>
-            <h3 class="project-title glitch-text" data-text="Pixel Art Maker - Retro Studio">
-              Pixel Art Maker - Retro Studio
-            </h3>
-            <p class="project-desc">
-              Feature-packed pixel art editor and animation suite for phones and tablets. Draw sprites on 16-layer customizable canvases, animate with multi-frame timelines and onion skinning, convert camera photos into stylized pixel art, and export game-ready GIFs &amp; sprite sheets. New in v1.1: a pro tablet layout with a tool rail and docked palette &amp; layers.
-            </p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">#MOBILE-APP</span>
-              <span class="tech-tag">#PIXEL-ART</span>
-              <span class="tech-tag">#ANIMATION</span>
-              <span class="tech-tag">#ONION-SKIN</span>
-              <span class="tech-tag">#SPRITE-SHEET</span>
-              <span class="tech-tag">#TABLET</span>
-              <span class="tech-tag">#ADMOB</span>
-            </div>
-            <div class="project-actions">
-              <a href="projects/pixel-art-maker.html" class="pixel-btn pixel-btn-primary">
-                <span>📜</span> QUEST DETAILS
-              </a>
-              <a href="privacy/pixel-art-maker.html" class="pixel-btn pixel-btn-secondary">
-                <span>🛡️</span> PRIVACY POLICY
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Featured Project: Rivo AI -->
-        <article class="project-card featured-quest-card" data-category="web tools">
-          <div class="project-preview">
-            <span class="preview-quest-num">QUEST #01</span>
-            <span class="pixel-badge badge-green preview-badge-status">● LIVE IN PRODUCTION</span>
-            <div class="project-real-img-frame">
-              <img src="images/rivo-real.png" alt="Rivo AI - Content Creation Studio" class="project-card-real-img">
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="quest-tags-top">
-              <span class="pixel-badge badge-gold">★ FEATURED QUEST</span>
-              <span class="pixel-badge badge-cyan">SAAS &bull; AI STUDIO</span>
-            </div>
-            <h3 class="project-title glitch-text" data-text="Rivo AI - Content Studio">
-              Rivo AI - Content Studio
-            </h3>
-            <p class="project-desc">
-              All-in-one generative AI platform engineered for video creators and storytellers. Automatically transforms long videos into viral recaps, synthesizes realistic AI voiceovers and custom voice cloning, and generates bilingual subtitles (Myanmar &amp; English) with Google Gemini AI.
-            </p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">#NEXTJS</span>
-              <span class="tech-tag">#GEMINI-AI</span>
-              <span class="tech-tag">#TAILWIND</span>
-              <span class="tech-tag">#TTS-VOICE</span>
-              <span class="tech-tag">#VIDEO-PIPELINE</span>
-            </div>
-            <div class="project-actions">
-              <a href="projects/rivo-ai.html" class="pixel-btn pixel-btn-primary">
-                <span>📜</span> QUEST DETAILS
-              </a>
-              <a href="https://rivoai.app/" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-secondary">
-                <span>🚀</span> LAUNCH APP
-              </a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- Skills & Inventory Section -->
-    <section id="skills" class="section-wrapper">
-      <div class="pixel-box section-head-box">
-        <div class="section-title-group">
-          <h2 class="section-title">
-            <span>🎒</span> <span class="glitch-text" data-text="EQUIPPED GEAR &amp; INVENTORY">EQUIPPED GEAR &amp; INVENTORY</span>
-          </h2>
-          <p class="section-subtitle">
-            Languages, frameworks, and tools mastered on the engineering journey.
-          </p>
-        </div>
-      </div>
-
-      <div class="skills-grid">
-        <!-- Slot 1: Weapons (Languages) -->
-        <div class="inventory-slot-box">
-          <div class="inventory-header">
-            <span>🗡️</span> PRIMARY WEAPONS (LANGUAGES)
-          </div>
-          <div class="inventory-items">
-            <span class="item-badge">🐘 PHP</span>
-            <span class="item-badge">⚡ JavaScript (ES6+)</span>
-            <span class="item-badge">🎯 C# (.NET)</span>
-            <span class="item-badge">🔷 TypeScript</span>
-            <span class="item-badge">🌐 HTML5 / CSS3</span>
-            <span class="item-badge">🗄️ MySQL / SQL</span>
-          </div>
-        </div>
-
-        <!-- Slot 2: Armor (Frameworks & Engines) -->
-        <div class="inventory-slot-box">
-          <div class="inventory-header">
-            <span>🛡️</span> DEFENSIVE ARMOR (FRAMEWORKS &amp; ENGINES)
-          </div>
-          <div class="inventory-items">
-            <span class="item-badge">🔥 Laravel</span>
-            <span class="item-badge">▲ Next.js</span>
-            <span class="item-badge">⚛️ React</span>
-            <span class="item-badge">🎮 Unity (2D / 3D)</span>
-            <span class="item-badge">🚀 Node.js</span>
-            <span class="item-badge">🌊 Tailwind CSS</span>
-          </div>
-        </div>
-
-        <!-- Slot 3: Magic Items (Tools & DevOps) -->
-        <div class="inventory-slot-box">
-          <div class="inventory-header">
-            <span>🧪</span> MAGIC ITEMS (TOOLS &amp; DEVOPS)
-          </div>
-          <div class="inventory-items">
-            <span class="item-badge">🐙 Git &amp; GitHub</span>
-            <span class="item-badge">📦 Composer &amp; NPM</span>
-            <span class="item-badge">🐳 Docker</span>
-            <span class="item-badge">🎮 Unity Hub</span>
-            <span class="item-badge">💻 VS Code &amp; VS</span>
-            <span class="item-badge">🐧 Linux &amp; Nginx</span>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact / Dialog Box Section -->
-    <section id="contact" class="section-wrapper">
-      <div class="contact-dialog-box">
-        <div class="dialog-header">
-          <span class="speaker-name">NAY MYO MHAN</span>
-          <span class="pixel-badge badge-cyan">TRANSMISSION CHANNEL</span>
+    <!-- Skills -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Expertise</p>
+          <h2 id="skills-title">What I do</h2>
+          <p>Four areas I work across, and the core tools I rely on in each.</p>
         </div>
 
-        <p class="dialog-speech">
-          "Have a quest, a project collaboration idea, or want to discuss engineering and retro tech? Send a transmission through any of the channels below!"
-        </p>
+        <ul class="card capabilities">
+          <li class="capability">
+            <div class="capability-head">
+              <div class="card-icon" aria-hidden="true">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3>Full-stack web</h3>
+            </div>
+            <div class="capability-body">
+              <p>Production web apps, REST APIs and admin dashboards &mdash; from data model to deployment.</p>
+              <p class="stack">Laravel &middot; Next.js &middot; React &middot; TypeScript &middot; MySQL</p>
+            </div>
+          </li>
 
-        <div class="contact-options">
-          <a href="mailto:contact@naymyomhan.com" class="pixel-btn pixel-btn-primary">
-            <span>📧</span> EMAIL ME
-          </a>
-          <a href="https://github.com/naymyomhan" target="_blank" rel="noopener noreferrer" class="pixel-btn">
-            <span>🐙</span> GITHUB
-          </a>
-          <a href="https://linkedin.com/in/naymyomhan" target="_blank" rel="noopener noreferrer" class="pixel-btn">
-            <span>💼</span> LINKEDIN
-          </a>
-          <a href="https://t.me/naymyomhan" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-secondary">
-            <span>✈️</span> TELEGRAM
-          </a>
+          <li class="capability">
+            <div class="capability-head">
+              <div class="card-icon" aria-hidden="true">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+              </div>
+              <h3>AI engineering</h3>
+            </div>
+            <div class="capability-body">
+              <p>LLM-powered features in real products: multimodal analysis, speech-to-text, and voice generation pipelines.</p>
+              <p class="stack">Google Gemini &middot; Prompt design &middot; Speech-to-text &middot; Text-to-speech</p>
+            </div>
+          </li>
+
+          <li class="capability">
+            <div class="capability-head">
+              <div class="card-icon" aria-hidden="true">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+              </div>
+              <h3>Mobile &amp; games</h3>
+            </div>
+            <div class="capability-body">
+              <p>Offline-first Android apps published on Google Play, plus 2D and 3D games in Unity.</p>
+              <p class="stack">Flutter &middot; Dart &middot; SQLite &middot; Unity (C#)</p>
+            </div>
+          </li>
+
+          <li class="capability">
+            <div class="capability-head">
+              <div class="card-icon" aria-hidden="true">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+              </div>
+              <h3>Infrastructure</h3>
+            </div>
+            <div class="capability-body">
+              <p>Deploying, hosting and maintaining production services.</p>
+              <p class="stack">Docker &middot; Linux &middot; Nginx &middot; Vercel &middot; Git</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="card contact-card">
+          <div>
+            <p class="kicker">Contact</p>
+            <h2 id="contact-title">Let&rsquo;s work together</h2>
+            <p>Have a project, a role or a collaboration in mind? The quickest way to reach me is by email &mdash; I&rsquo;m happy to talk.</p>
+            <div class="btn-row">
+              <a href="mailto:contact@naymyomhan.com" class="btn btn-primary">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Email me
+              </a>
+            </div>
+          </div>
+
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:contact@naymyomhan.com">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Email
+                <span class="value">contact@naymyomhan.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/naymyomhan" target="_blank" rel="noopener noreferrer">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                GitHub
+                <span class="value">github.com/naymyomhan</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/naymyomhan" target="_blank" rel="noopener noreferrer">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+                <span class="value">in/naymyomhan</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/naymyomhan" target="_blank" rel="noopener noreferrer">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                Telegram
+                <span class="value">@naymyomhan</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="retro-footer">
-      <div class="pixel-box footer-box">
-        <div class="footer-arcade-text">
-          ★ PRESS START TO CONTINUE ★
-        </div>
-        <p class="footer-copy">
-          &copy; 2026 Nay Myo Mhan &bull; Pixel Art Portfolio &bull; Crafted with Pure Code
-        </p>
-        <a href="#hero" class="pixel-btn pixel-btn-sm" style="margin-top: 6px;">
-          <span>▲</span> BACK TO TOP
-        </a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>&copy; 2026 A Dev Dude. All rights reserved.</p>
       </div>
-    </footer>
-
-  </div>
-
-  <!-- Main JavaScript -->
-  <script src="js/main.js?v=2.1"></script>
+      <nav aria-label="App privacy policies">
+        <p class="footer-heading">App privacy policies</p>
+        <ul class="footer-links">
+          <li><a href="privacy/invoice-maker.html">Easy Invoice Maker &amp; POS</a></li>
+          <li><a href="privacy/1000-dreams.html">1000 Dreams</a></li>
+          <li><a href="privacy/pixel-art-maker.html">Pixel Art Maker</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

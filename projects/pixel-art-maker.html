@@ -2,256 +2,285 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quest #02: Pixel Art Maker | Nay Myo Mhan - Developer Portfolio</title>
-  <meta name="description" content="Quest details and architectural breakdown for Pixel Art Maker - Mobile pixel art editor and animation suite engineered by Nay Myo Mhan.">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230b0c14'/><rect x='2' y='4' width='12' height='8' fill='%232a2e47'/><rect x='4' y='7' width='3' height='2' fill='%2300f0ff'/><rect x='5' y='6' width='1' height='4' fill='%2300f0ff'/><rect x='10' y='6' width='2' height='2' fill='%23ff0055'/><rect x='11' y='8' width='2' height='2' fill='%23ffcc00'/></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixel Art Maker — Draw, Animate &amp; Create Pixel Art on Android</title>
+  <meta name="description" content="Pixel Art Maker is a pixel art editor and frame-by-frame animation studio for Android phones and tablets: 16 layers, onion skinning, photo to pixel art, and GIF & sprite-sheet export.">
+  <meta name="author" content="A Dev Dude">
+  <link rel="canonical" href="https://naymyomhan.github.io/projects/pixel-art-maker.html">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c0e13" media="(prefers-color-scheme: dark)">
 
-  <!-- Core Pixel Art Stylesheet -->
-  <link rel="stylesheet" href="../css/style.css?v=2.4">
-  <style>
-    /* Tablet screenshots (16:9): two per row, one per row on small screens. */
-    .tablet-screens-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-top: 14px;
-    }
-    @media (max-width: 720px) {
-      .tablet-screens-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="A Dev Dude">
+  <meta property="og:title" content="Pixel Art Maker — Draw, Animate &amp; Create Pixel Art">
+  <meta property="og:description" content="A pixel art editor and animation studio for phones and tablets. 16 layers, onion skinning, photo to pixel art, GIF & sprite-sheet export.">
+  <meta property="og:url" content="https://naymyomhan.github.io/projects/pixel-art-maker.html">
+  <meta property="og:image" content="https://naymyomhan.github.io/images/pixel-art-maker-banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="../images/pixel-art-maker-icon.png">
+  <link rel="apple-touch-icon" href="../images/pixel-art-maker-icon.png">
+  <link rel="stylesheet" href="../css/style.css?v=3.2">
 </head>
-<body>
+<body class="theme-pixel">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- CRT Curved Screen & Scanline Effect Overlay -->
-  <div class="crt-overlay" aria-hidden="true"></div>
-  <!-- Retro Cyber Glitch Overlay -->
-  <div class="crt-glitch-bar" aria-hidden="true"></div>
-
-  <!-- Main Container -->
-  <div class="container" style="padding-top: 24px; padding-bottom: 40px;">
-
-    <!-- Top Retro HUD Navigation -->
-    <header class="retro-hud" style="margin-bottom: 24px;">
-      <nav class="hud-bar" aria-label="Main Navigation">
-        <a href="../index.html" class="hud-logo">
-          <span>👾</span> <span class="glitch-text" data-text="NAY MYO MHAN">NAY MYO MHAN</span> <span class="blink">_</span>
-        </a>
-
-        <ul class="hud-nav">
-          <li><a href="../index.html" class="hud-link">[ 🏠 HOME ]</a></li>
-          <li><a href="../index.html#projects" class="hud-link active">[ ◀ BACK TO QUESTS ]</a></li>
-          <li><a href="../privacy/pixel-art-maker.html" class="hud-link">[ 🛡️ PRIVACY POLICY ]</a></li>
-          <li><a href="../index.html#contact" class="hud-link">[ 📜 CONTACT ]</a></li>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand" aria-label="A Dev Dude — portfolio home">
+        <img class="brand-mark" src="../images/a-dev-dude-96.jpg" alt="" width="32" height="32">
+        <span class="brand-text">A Dev Dude</span>
+      </a>
+      <nav aria-label="Page">
+        <ul class="nav">
+          <li class="nav-optional"><a href="#features">Features</a></li>
+          <li class="nav-optional"><a href="#screenshots">Screenshots</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="../privacy/pixel-art-maker.html">Privacy</a></li>
         </ul>
-
-        <div class="hud-controls">
-          <button id="toggle-sound" class="hud-icon-btn" title="Toggle 8-bit Audio">
-            <span>🔊</span> SFX: ON
-          </button>
-          <button id="toggle-theme" class="hud-icon-btn" title="Switch Color Palette">
-            <span>🎨</span> ARCADE
-          </button>
-          <button id="toggle-crt" class="hud-icon-btn" title="Toggle CRT Scanlines">
-            <span>📺</span> CRT: ON
-          </button>
-          <button id="toggle-glitch" class="hud-icon-btn glitch-active-btn" title="Toggle Retro Cyber Glitch">
-            <span>⚡</span> GLITCH: ON
-          </button>
-        </div>
       </nav>
-    </header>
-
-    <!-- Breadcrumbs Navigation -->
-    <div style="font-family: var(--font-pixel); font-size: 0.65rem; color: var(--color-cyan); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-      <a href="../index.html" style="color: var(--text-muted); text-decoration: none;">PORTFOLIO</a>
-      <span style="color: var(--color-primary);">&gt;&gt;</span>
-      <a href="../index.html#projects" style="color: var(--text-muted); text-decoration: none;">QUEST LOG</a>
-      <span style="color: var(--color-primary);">&gt;&gt;</span>
-      <span style="color: var(--color-gold);">QUEST #02: PIXEL ART MAKER</span>
     </div>
+  </header>
 
-    <!-- Main Quest Detail Box (Pixel Art Style) -->
-    <article class="pixel-box quest-detail-card">
-      
-      <!-- Quest Header -->
-      <div class="quest-header-bar">
-        <div class="quest-id-group">
-          <span class="pixel-badge badge-cyan">QUEST #02</span>
-          <span class="pixel-badge badge-green">● PUBLISHED APP</span>
-          <span class="pixel-badge badge-gold">MOBILE CREATIVE STUDIO</span>
-          <span class="pixel-badge badge-red">v1.1 &bull; NEW TABLET LAYOUT</span>
-        </div>
-        <h1 class="quest-title">
-          <span class="glitch-text" data-text="PIXEL ART MAKER: RETRO STUDIO">PIXEL ART MAKER: RETRO STUDIO</span>
-        </h1>
-        <p class="quest-subtitle">
-          A powerful pixel art editor and frame-by-frame animation studio for phones and tablets. Draw multi-layer sprites, animate with timeline &amp; onion skinning, convert photos into pixel art, and export game-ready GIFs &amp; sprite sheets &mdash; now with a dedicated pro tablet layout.
-        </p>
-      </div>
+  <main id="main">
 
-      <!-- Feature Banner Frame -->
-      <div class="quest-screenshot-box">
-        <div class="screenshot-bar">
-          <span class="bar-dot"></span>
-          <span>FEED: PIXEL ART MAKER // OFFICIAL BANNER &amp; ARTWORK</span>
-        </div>
-        <img src="../images/pixel-art-maker-banner.png?v=1.1.1" alt="Pixel Art Maker Feature Banner - Phone and Tablet" class="quest-screenshot-img">
-      </div>
+    <!-- Hero -->
+    <section class="app-hero">
+      <div class="container">
+        <ol class="breadcrumb" aria-label="Breadcrumb">
+          <li><a href="../index.html">Portfolio</a></li>
+          <li><a href="../index.html#work">Projects</a></li>
+          <li><span aria-current="page">Pixel Art Maker</span></li>
+        </ol>
 
-      <!-- Real Mobile App Screenshots Showcase (3-Phone Grid) -->
-      <div>
-        <h2 class="quest-section-heading">
-          <span>📱</span> MOBILE APPLICATION INTERFACE
-        </h2>
-        <div class="mobile-screens-grid">
-          <div class="mobile-screen-frame">
-            <div class="mobile-screen-caption">01 // SPRITE CANVAS &amp; PHOTO IMPORT</div>
-            <img src="../images/pixel-art-maker-screen1.png?v=1.1.1" alt="Create Sprites - Blank Canvas and Photo to Pixel Art" class="mobile-screen-img">
-          </div>
-          <div class="mobile-screen-frame">
-            <div class="mobile-screen-caption">02 // FRAME ANIMATION &amp; TIMELINE</div>
-            <img src="../images/pixel-art-maker-screen2.png?v=1.1.1" alt="Frame-by-Frame Animation with Timeline and Onion Skinning" class="mobile-screen-img">
-          </div>
-          <div class="mobile-screen-frame">
-            <div class="mobile-screen-caption">03 // SELECT, TRANSFORM &amp; RECOLOR</div>
-            <img src="../images/pixel-art-maker-screen3.png?v=1.1.1" alt="Select, Transform and Recolor with Live Hue, Saturation and Lightness" class="mobile-screen-img">
-          </div>
-        </div>
-      </div>
-
-      <!-- Tablet Layout Showcase (new in v1.1) -->
-      <div>
-        <h2 class="quest-section-heading">
-          <span>📲</span> TABLET STUDIO (NEW IN v1.1)
-        </h2>
-        <div class="tablet-screens-grid">
-          <div class="mobile-screen-frame">
-            <div class="mobile-screen-caption">01 // TOOL RAIL, DOCKED PALETTE &amp; LAYERS</div>
-            <img src="../images/pixel-art-maker-tablet1.png?v=1.1.1" alt="Pro Tablet Studio - Tool Rail, Docked Palette and Layers, Timeline" class="mobile-screen-img">
-          </div>
-          <div class="mobile-screen-frame">
-            <div class="mobile-screen-caption">02 // BIG CANVAS FOR DETAILED ART</div>
-            <img src="../images/pixel-art-maker-tablet2.png?v=1.1.1" alt="Big Canvas for Detailed Pixel Art on Tablets" class="mobile-screen-img">
-          </div>
-        </div>
-      </div>
-
-      <!-- Concise 2-Column Quest Content Grid -->
-      <div class="quest-content-grid" style="margin-top: 8px;">
-        
-        <!-- Column 1: Brief & Engineering Role -->
-        <div class="quest-col">
-          <h2 class="quest-section-heading">
-            <span>📜</span> QUEST BRIEF &amp; DEV ROLE
-          </h2>
-          <div class="quest-text-block">
-            <p>
-              <strong>Mission:</strong> Build a smooth, frictionless mobile pixel art creation tool for game developers, artists, and retro fans. Remove desktop software complexity while preserving professional multi-layer painting and timeline animation capabilities.
+        <div class="app-hero-inner">
+          <img src="../images/pixel-art-maker-icon.png" alt="Pixel Art Maker app icon" class="app-icon" width="96" height="96">
+          <div>
+            <h1>Pixel Art Maker</h1>
+            <p class="app-tagline">
+              A pixel art editor and frame-by-frame animation studio for phones and tablets. Draw multi-layer sprites, animate with a
+              timeline and onion skinning, turn photos into pixel art, and export game-ready GIFs and sprite sheets.
             </p>
-            <p>
-              <strong>Engineering Role:</strong> Creator &amp; Lead Mobile Developer (A Dev Dude / Nay Myo Mhan). Engineered the high-performance raster drawing engine, multi-frame timeline with real-time onion skinning, color quantization algorithms for photo conversion, palette management, and Google AdMob monetization.
-            </p>
-          </div>
-
-          <div class="quest-tech-section">
-            <span class="quest-tech-label">[ EQUIPPED TECH STACK ]</span>
-            <div class="inventory-items" style="margin-top: 6px;">
-              <span class="item-badge"><span>📱</span> Android SDK</span>
-              <span class="item-badge"><span>🎨</span> Canvas Engine</span>
-              <span class="item-badge"><span>🎞️</span> Frame Animation</span>
-              <span class="item-badge"><span>📲</span> Adaptive Tablet UI</span>
-              <span class="item-badge"><span>🖼️</span> Color Quantization</span>
-              <span class="item-badge"><span>💾</span> GIF &amp; Sprite Sheets</span>
-              <span class="item-badge"><span>📢</span> Google AdMob</span>
-              <span class="item-badge"><span>🔒</span> Local Storage</span>
+            <ul class="app-facts" aria-label="At a glance">
+              <li class="badge badge-accent">Android phones &amp; tablets</li>
+              <li class="badge">16 layers</li>
+              <li class="badge">Frame animation</li>
+              <li class="badge">Artwork stays on device</li>
+              <li class="badge">Free with ads</li>
+            </ul>
+            <div class="btn-row">
+              <a href="#features" class="btn btn-primary">
+                Explore features
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="../privacy/pixel-art-maker.html" class="btn btn-secondary">Privacy policy</a>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Column 2: Core Modules & Features -->
-        <div class="quest-col">
-          <h2 class="quest-section-heading">
-            <span>⚡</span> CORE MODULES
-          </h2>
-          <ul class="quest-feature-list">
-            <li class="quest-feature-item">
-              <span class="feature-bullet">🎨</span>
-              <div>
-                <strong>16-Layer Canvas Studio:</strong> Up to 16 independent layers with opacity blending, canvas presets from 16x16 up to 256x256 plus custom sizes, and curated retro palettes.
-              </div>
+    <div class="container">
+      <figure class="feature-graphic">
+        <img src="../images/pixel-art-maker-banner.png?v=1.1.1" alt="Pixel Art Maker — draw, animate and create pixel art on phone and tablet" width="1024" height="500">
+      </figure>
+    </div>
+
+    <!-- Screenshots -->
+    <section class="section" id="screenshots" aria-labelledby="shots-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Screenshots</p>
+          <h2 id="shots-title">A full pixel studio in your pocket</h2>
+          <p>A compact one-hand layout on phones, and a pro studio layout on tablets.</p>
+        </div>
+        <div class="shots">
+          <ul class="shots-track">
+            <li>
+              <figure class="shot">
+                <img src="../images/pixel-art-maker-screen1.png?v=1.1.1" alt="Create sprites from a blank canvas or a photo" width="576" height="1024" loading="lazy" decoding="async">
+                <figcaption>Sprite canvas &amp; photo import</figcaption>
+              </figure>
             </li>
-            <li class="quest-feature-item">
-              <span class="feature-bullet">🎞️</span>
-              <div>
-                <strong>Frame-by-Frame Animation:</strong> Dedicated multi-frame timeline with onion skinning, frame duplication, and real-time playback control for smooth game sprites.
-              </div>
+            <li>
+              <figure class="shot">
+                <img src="../images/pixel-art-maker-screen2.png?v=1.1.1" alt="Frame-by-frame animation with timeline and onion skinning" width="576" height="1024" loading="lazy" decoding="async">
+                <figcaption>Frame animation &amp; timeline</figcaption>
+              </figure>
             </li>
-            <li class="quest-feature-item">
-              <span class="feature-bullet">🖼️</span>
-              <div>
-                <strong>Photo to Pixel Art:</strong> High-speed color quantization algorithm that transforms camera photos and gallery pictures into stylized pixel art sprites.
-              </div>
-            </li>
-            <li class="quest-feature-item">
-              <span class="feature-bullet">📲</span>
-              <div>
-                <strong>Phone &amp; Tablet Layouts:</strong> A compact one-hand layout on phones and a pro tablet studio with a tool rail, docked palette &amp; layers and a bigger canvas, in portrait or landscape.
-              </div>
-            </li>
-            <li class="quest-feature-item">
-              <span class="feature-bullet">💾</span>
-              <div>
-                <strong>HD GIF &amp; Sprite Sheets:</strong> Seamlessly export work as animated GIFs, sprite sheets for Unity and Godot, high-res PNGs, and project files.
-              </div>
-            </li>
-            <li class="quest-feature-item">
-              <span class="feature-bullet">🔒</span>
-              <div>
-                <strong>100% Private Local Storage:</strong> Zero cloud tracking; all artwork, project drafts, and custom palettes stay strictly on the user's device.
-              </div>
+            <li>
+              <figure class="shot">
+                <img src="../images/pixel-art-maker-screen3.png?v=1.1.1" alt="Select, transform and recolor with live hue, saturation and lightness" width="576" height="1024" loading="lazy" decoding="async">
+                <figcaption>Select, transform &amp; recolor</figcaption>
+              </figure>
             </li>
           </ul>
         </div>
 
+        <h3 class="subsection-title">Tablet studio &mdash; new in v1.1</h3>
+        <ul class="tablet-shots">
+          <li>
+            <figure class="tablet-shot">
+              <img src="../images/pixel-art-maker-tablet1.png?v=1.1.1" alt="Tablet studio with tool rail, docked palette and layers, and timeline" width="960" height="540" loading="lazy" decoding="async">
+              <figcaption>Tool rail, docked palette &amp; layers</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="tablet-shot">
+              <img src="../images/pixel-art-maker-tablet2.png?v=1.1.1" alt="Big canvas for detailed pixel art on tablets" width="960" height="540" loading="lazy" decoding="async">
+              <figcaption>Big canvas for detailed art</figcaption>
+            </figure>
+          </li>
+        </ul>
       </div>
+    </section>
 
-      <!-- Action Footer Links -->
-      <div class="quest-footer-actions">
-        <a href="../privacy/pixel-art-maker.html" class="pixel-btn pixel-btn-primary">
-          <span>🛡️</span> VIEW PRIVACY POLICY
-        </a>
-        <a href="../index.html#projects" class="pixel-btn">
-          <span>◀</span> BACK TO QUEST LOG
-        </a>
-        <a href="../index.html#contact" class="pixel-btn pixel-btn-secondary">
-          <span>📬</span> CONTACT DEVELOPER
-        </a>
-      </div>
-
-    </article>
-
-    <!-- Footer -->
-    <footer class="retro-footer" style="margin-top: 32px;">
-      <div class="pixel-box footer-box">
-        <div class="footer-arcade-text">
-          ★ PRESS START TO CONTINUE ★
+    <!-- Features -->
+    <section class="section section-alt" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Features</p>
+          <h2 id="features-title">Professional tools without the desktop complexity</h2>
+          <p>Multi-layer painting and timeline animation for game developers, artists and retro fans &mdash; on the device you already carry.</p>
         </div>
-        <p class="footer-copy">
-          &copy; 2026 Nay Myo Mhan &bull; Pixel Art Portfolio &bull; All Rights Reserved
-        </p>
-        <a href="../index.html" class="pixel-btn pixel-btn-sm" style="margin-top: 6px;">
-          <span>🏠</span> RETURN TO MAIN HUB
-        </a>
+        <ul class="feature-grid">
+          <li class="card feature">
+            <div class="card-icon" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>16-layer canvas</h3>
+            <p>Up to 16 independent layers with opacity blending, canvas presets from 16&times;16 up to 256&times;256 plus custom sizes, and curated retro palettes.</p>
+          </li>
+          <li class="card feature">
+            <div class="card-icon" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Frame-by-frame animation</h3>
+            <p>A multi-frame timeline with onion skinning, frame duplication and real-time playback for smooth game sprites.</p>
+          </li>
+          <li class="card feature">
+            <div class="card-icon" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Photo to pixel art</h3>
+            <p>Fast colour quantization turns camera photos and gallery pictures into stylized pixel art sprites.</p>
+          </li>
+          <li class="card feature">
+            <div class="card-icon" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Phone &amp; tablet layouts</h3>
+            <p>A compact one-hand layout on phones and a pro tablet studio with a tool rail, docked palette &amp; layers and a bigger canvas, in portrait or landscape.</p>
+          </li>
+          <li class="card feature">
+            <div class="card-icon" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>GIF &amp; sprite-sheet export</h3>
+            <p>Export animated GIFs, sprite sheets for Unity and Godot, high-resolution PNGs, and project files.</p>
+          </li>
+          <li class="card feature">
+            <div class="card-icon" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Select, transform &amp; recolor</h3>
+            <p>Select areas to move and transform them, and recolor artwork with live hue, saturation and lightness controls.</p>
+          </li>
+        </ul>
       </div>
-    </footer>
+    </section>
 
-  </div>
+    <!-- Privacy -->
+    <section class="section" aria-labelledby="privacy-title">
+      <div class="container">
+        <div class="privacy-band">
+          <div class="card-icon" aria-hidden="true">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div>
+            <h2 id="privacy-title">Your artwork stays on your device</h2>
+            <p>Drawings, animation frames, layers and custom palettes are saved locally. There are no cloud servers &mdash; your art leaves the device only when you export or share it yourself.</p>
+          </div>
+          <a href="../privacy/pixel-art-maker.html" class="btn btn-secondary">Read the privacy policy</a>
+        </div>
+      </div>
+    </section>
 
-  <!-- Main JavaScript -->
-  <script src="../js/main.js?v=2.4"></script>
+    <!-- About -->
+    <section class="section section-alt" id="about" aria-labelledby="about-title">
+      <div class="container split">
+        <div class="prose">
+          <div class="section-head" style="margin-bottom: 24px;">
+            <p class="kicker">About the project</p>
+            <h2 id="about-title">Why I built it</h2>
+          </div>
+          <p>
+            To give game developers, artists and retro fans a smooth, frictionless pixel art tool on mobile &mdash; removing the
+            complexity of desktop software while keeping professional multi-layer painting and timeline animation.
+          </p>
+          <h3>My role</h3>
+          <p>
+            Creator and lead mobile developer. I engineered the raster drawing engine, the multi-frame timeline with real-time onion
+            skinning, colour quantization for photo conversion, palette management, the adaptive tablet layout, and Google AdMob
+            monetization.
+          </p>
+        </div>
+
+        <aside class="card info-card" aria-label="App details">
+          <dl class="details">
+            <div><dt>Platform</dt><dd>Android phones &amp; tablets</dd></div>
+            <div><dt>Canvas sizes</dt><dd>16&times;16 to 256&times;256, custom</dd></div>
+            <div><dt>Export</dt><dd>GIF, PNG, sprite sheets</dd></div>
+            <div><dt>Price</dt><dd>Free, ad-supported</dd></div>
+            <div><dt>Developer</dt><dd>A Dev Dude</dd></div>
+          </dl>
+          <h3>Built with</h3>
+          <p class="stack">Android SDK &middot; Custom canvas engine &middot; Color quantization &middot; Google AdMob</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Support -->
+    <section class="section" id="support" aria-labelledby="support-title">
+      <div class="container">
+        <div class="card contact-card">
+          <div>
+            <p class="kicker">Support</p>
+            <h2 id="support-title">Questions or feedback?</h2>
+            <p>Found a bug, lost a project, or have an idea for a new tool? Email the developer and include your device model if something isn&rsquo;t working.</p>
+            <div class="btn-row">
+              <a href="mailto:naymyomhan.developer@gmail.com?subject=Pixel%20Art%20Maker" class="btn btn-primary">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Email support
+              </a>
+            </div>
+          </div>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:naymyomhan.developer@gmail.com?subject=Pixel%20Art%20Maker">
+                Email
+                <span class="value">naymyomhan.developer@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="../privacy/pixel-art-maker.html">
+                Privacy policy
+                <span class="value">Read</span>
+              </a>
+            </li>
+            <li>
+              <a href="../index.html">
+                Developer
+                <span class="value">A Dev Dude</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>&copy; 2026 A Dev Dude. All rights reserved.</p>
+        <p>Pixel Art Maker is a free, ad-supported app for Android.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="../privacy/pixel-art-maker.html">Privacy policy</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="../index.html">Portfolio</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>

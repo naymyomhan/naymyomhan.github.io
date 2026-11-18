@@ -1,76 +1,40 @@
-# naymyomhan.github.io 👾
+# naymyomhan.github.io
 
-Personal developer portfolio for **Nay Myo Mhan** — Full-Stack Developer specializing in **PHP (Laravel)**, **JavaScript (Next.js)**, and **C# (Unity)**, featuring an **8-Bit Pixel Art & Retro Gaming aesthetic**.
+Portfolio of **A Dev Dude**, Full-Stack, Mobile & AI Engineer, plus the landing pages and privacy policies for the A Dev Dude apps on Google Play.
 
-Hosted live on GitHub Pages: [https://naymyomhan.github.io](https://naymyomhan.github.io)
+Live site: [https://naymyomhan.github.io](https://naymyomhan.github.io)
 
----
-
-## 🕹️ Features
-
-- **8-Bit Pixel Art Theme**: Retro typography, authentic pixel borders, and crisp pixel sprites.
-- **Lo-Fi Chill Background Music (BGM)**: Built-in procedural Lo-Fi synthesizer (warm Rhodes chords, vinyl crackle, chill sub-bass, and lazy hip-hop drums) generated natively via the Web Audio API with zero external audio dependencies.
-- **Built-in 8-Bit Sound Effects**: Interactive sound effects (retro bleeps, coin sounds, level up) powered by Web Audio API.
-- **Curved Screen CRT System**: Vintage curved arcade monitor bezel, glass glare, scanbeam, and phosphor glow.
-- **Color Palette Switcher**:
-  - **Arcade Dark** (Default neon cyber arcade)
-  - **Game Boy Classic** (Authentic 4-color monochrome green)
-  - **Synthwave** (Vibrant 80s neon purple/pink)
-- **Hero Section**: Player 1 profile card, dynamic HP/MP/XP status bars, character avatar, and quick links.
-- **Quest Log (Projects Section)**: Clean, modular placeholder project cards with category filters (`All`, `Web Apps`, `Games`, `Tools`), status badges, and source/demo links.
-- **Equipped Gear (Skills)**: RPG inventory style display for languages, frameworks, and tools.
-- **Transmission Channel (Contact)**: Retro dialogue box with direct contact channels.
-- **Zero Build Dependencies**: Pure HTML5, Modern CSS, and Vanilla JavaScript. Deploys instantly to GitHub Pages with zero build steps.
-- **Responsive**: Perfectly optimized for mobile, tablet, and desktop screens.
-
----
-
-## 📂 Project Structure
+## Structure
 
 ```
 naymyomhan.github.io/
-├── index.html         # Main portfolio markup & pixel art SVGs
-├── css/
-│   └── style.css      # Retro pixel styling, animations & theme variables
-├── js/
-│   └── main.js        # 8-bit audio synth, theme toggle, filters & interactions
-└── README.md          # Documentation
+├── index.html                 # Portfolio home: intro, projects, skills, contact
+├── css/style.css              # Shared styles (light/dark follows the OS setting)
+├── projects/                  # App landing pages / case studies
+│   ├── invoice-maker.html
+│   ├── 1000-dreams.html
+│   ├── pixel-art-maker.html
+│   └── rivo-ai.html
+├── privacy/                   # App privacy policies (linked from Google Play)
+├── privacy-policy/            # Identical copies kept so older Play Console links keep working
+├── images/                    # App icons, feature graphics and screenshots
+├── app-ads.txt                # AdMob authorized sellers file (must stay at the site root)
+└── robots.txt
 ```
 
----
+No build step and no JavaScript: plain HTML and CSS served by GitHub Pages.
 
-## 🛠️ Customizing Your Projects
+## Updating an app
 
-To replace the placeholder projects with your actual work, open `index.html` and find the `<div class="projects-grid">` section. Each project is wrapped in an `<article class="project-card" data-category="...">`:
+- **Landing page:** edit `projects/<app>.html`. Each page sets its accent colour with a body class (`theme-invoice`, `theme-dreams`, `theme-pixel`, `theme-rivo`) defined at the top of `css/style.css`.
+- **Privacy policy:** edit `privacy/<app>.html`, update the "Last updated" date, then copy the file over `privacy-policy/<app>.html` so both URLs stay identical.
+- **New app:** copy an existing project page and privacy page, add its card to the Work section and its policy link to the footer in `index.html`.
+- After changing `css/style.css`, bump the `?v=` query in the pages' stylesheet link so browsers pick up the new file.
 
-```html
-<article class="project-card" data-category="web">
-  <!-- Customize preview, title, description, tags, and links -->
-  <h3 class="project-title">Your Project Name</h3>
-  <p class="project-desc">Brief description of your project...</p>
-  <div class="project-tech-tags">
-    <span class="tech-tag">#REACT</span>
-    <span class="tech-tag">#NODEJS</span>
-  </div>
-  <div class="project-actions">
-    <a href="https://your-demo.com" class="pixel-btn pixel-btn-primary pixel-btn-sm">🎮 DEMO</a>
-    <a href="https://github.com/your-username/repo" class="pixel-btn pixel-btn-sm">📂 CODE</a>
-  </div>
-</article>
-```
-
----
-
-## 🚀 Local Development
-
-You can preview the site locally using any static HTTP server:
+## Local preview
 
 ```bash
-# Using Python
 python -m http.server 8000
-
-# Using Node.js npx
-npx serve .
 ```
 
-Then visit `http://localhost:8000` in your browser.
+Then open `http://localhost:8000`.
