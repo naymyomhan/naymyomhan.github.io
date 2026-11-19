@@ -62,11 +62,13 @@
 .theme-dreams  { --accent: #4f46e5; }
 .theme-pixel   { --accent: #e11d48; }
 .theme-rivo    { --accent: #7c3aed; }
+.theme-easythai { --accent: #1e5ae6; }
 
 .theme-invoice,
 .theme-dreams,
 .theme-pixel,
-.theme-rivo {
+.theme-rivo,
+.theme-easythai {
   --accent-ink: var(--accent);
   --accent-contrast: #ffffff;
 }
@@ -76,11 +78,13 @@
   .theme-dreams  { --accent: #a5b4fc; }
   .theme-pixel   { --accent: #fb7185; }
   .theme-rivo    { --accent: #c4b5fd; }
+  .theme-easythai { --accent: #7aa2ff; }
 
   .theme-invoice,
   .theme-dreams,
   .theme-pixel,
-  .theme-rivo {
+  .theme-rivo,
+  .theme-easythai {
     --accent-contrast: #0c0e13;
   }
 }

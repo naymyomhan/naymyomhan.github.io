@@ -11,6 +11,7 @@ naymyomhan.github.io/
 ├── index.html                 # Portfolio home: intro, projects, skills, contact
 ├── css/style.css              # Shared styles (light/dark follows the OS setting)
 ├── projects/                  # App landing pages / case studies
+│   ├── easy-thai.html
 │   ├── invoice-maker.html
 │   ├── 1000-dreams.html
 │   ├── pixel-art-maker.html
@@ -26,7 +27,7 @@ No build step and no JavaScript: plain HTML and CSS served by GitHub Pages.
 
 ## Updating an app
 
-- **Landing page:** edit `projects/<app>.html`. Each page sets its accent colour with a body class (`theme-invoice`, `theme-dreams`, `theme-pixel`, `theme-rivo`) defined at the top of `css/style.css`.
+- **Landing page:** edit `projects/<app>.html`. Each page sets its accent colour with a body class (`theme-easythai`, `theme-invoice`, `theme-dreams`, `theme-pixel`, `theme-rivo`) defined at the top of `css/style.css`.
 - **Privacy policy:** edit `privacy/<app>.html`, update the "Last updated" date, then copy the file over `privacy-policy/<app>.html` so both URLs stay identical.
 - **New app:** copy an existing project page and privacy page, add its card to the Work section and its policy link to the footer in `index.html`.
 - After changing `css/style.css`, bump the `?v=` query in the pages' stylesheet link so browsers pick up the new file.
